@@ -1,0 +1,10 @@
+function genpasswd()
+{
+  integer laenge
+  if [ -z $1 ]; then
+    laenge=16
+  else
+    laenge=$1
+  fi
+  tr -cd A-Za-z0-9_ < /dev/urandom | head -c ${laenge} | xargs
+}

@@ -13,8 +13,9 @@ hash -d     Rechnungen=$doc/pdf/Rechnungen
 hash -d        buecher=$doc/pdf/Bücher
 hash -d        eclipse=$doc/workspace
 hash -d android_studio=$doc/AndroidStudioProjects
-hash -d        qpython=$proj/python/Qpython
+hash -d        qpython=$proj/qpython
 hash -d           make=$proj/make
+hash -d           perl=$proj/perl
 hash -d        fortran=$proj/fortran
 hash -d          cobol=$proj/cobol
 unset doc

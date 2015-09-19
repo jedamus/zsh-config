@@ -1,6 +1,6 @@
 export OLDPROMPT=$PROMPT
 export OLDRPROMPT=$RPROMT
-chpwd() {
+precmd() {
   prmt=zshprompt.py
   if [[ -x $prmt ]]; then
     PROMPT="${$($prmt left):-$PROMPT}"

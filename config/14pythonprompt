@@ -1,6 +1,11 @@
-prmt=$HOME/bin/zshprompt.py
-[[ -x $prmt ]] && PROMPT="${$($prmt left):-$PROMPT}"
-[[ -x $prmt ]] && RPROMPT="${$($prmt right --last-exit-status=$?):-$RPROMPT}"
-#PROMPT="$($prmt left)"
-#RPROMPT="$($prmt right --last-exit-status=$?)"
-unset prmt
+export OLDPROMPT=$PROMPT
+export OLDRPROMPT=$RPROMT
+chpwd() {
+  prmt=zshprompt.py
+  if [[ -x $prmt ]]; then
+    PROMPT="${$($prmt left):-$PROMPT}"
+    RPROMPT="${$($prmt right --last-exit-status=$?):-$RPROMPT}"
+  else
+    PROMPT=$OLDPROMPT RPROMPT=$OLDRPROMPT
+  fi
+}

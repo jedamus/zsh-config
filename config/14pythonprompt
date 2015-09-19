@@ -1,11 +1,12 @@
 export OLDPROMPT=$PROMPT
-export OLDRPROMPT=$RPROMT
+export OLDRPROMPT=$RPROMPT
 precmd() {
   prmt=zshprompt.py
   if [[ -x $prmt ]]; then
-    PROMPT="${$($prmt left):-$PROMPT}"
-    RPROMPT="${$($prmt right --last-exit-status=$?):-$RPROMPT}"
+    export PROMPT="${$($prmt left):-$PROMPT}"
+    export RPROMPT="${$($prmt right --last-exit-status=$?):-$RPROMPT}"
   else
-    PROMPT=$OLDPROMPT RPROMPT=$OLDRPROMPT
+    export PROMPT=$OLDPROMPT
+    export RPROMPT=$OLDRPROMPT
   fi
 }

@@ -25,6 +25,9 @@ case $target in
   Darwin)
     export machtype="MacOS"
     ;;
+  Linux)
+    export machtype="Linux"
+    ;;
   *)
     export machtype="unknown"
     ;;

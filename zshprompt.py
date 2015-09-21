@@ -1,7 +1,7 @@
 #!/usr/bin/env python2
 # coding=utf-8
 
-# erzeugt Mittwoch, 11. März 2015 21:01 (C) 2015 von Leander Jedamus
+# erzeugt Mittwoch, 11. März 2015 21:01 2015 von Leander Jedamus
 # modifiziert Montag, 21. September 2015 17:01 von Leander Jedamus
 # modifiziert Samstag, 19. September 2015 18:36 von Leander Jedamus
 # modifiziert Mittwoch, 11. März 2015 21:03 von Leander Jedamus
@@ -22,10 +22,10 @@ def get_username():
     return pwd.getpwuid(os.getuid())[0]
 
 def get_machname():
-    if socket.gethostname().find('.')>=0:
-	name=socket.gethostname()
+    if socket.gethostname().find('.') >= 0:
+        name=socket.gethostname()
     else:
-	name=socket.gethostbyaddr(socket.gethostname())[0]
+        name=socket.gethostbyaddr(socket.gethostname())[0]
     return name.split(".")[0]
 
 def _zero_width(s):

@@ -2,6 +2,7 @@
 # coding=utf-8
 
 # erzeugt Mittwoch, 11. März 2015 21:01 (C) 2015 von Leander Jedamus
+# modifiziert Montag, 21. September 2015 12:54 von Leander Jedamus
 # modifiziert Samstag, 19. September 2015 18:36 von Leander Jedamus
 # modifiziert Mittwoch, 11. März 2015 21:03 von Leander Jedamus
 
@@ -216,7 +217,7 @@ def right_prompt(last_exit_status):
         last_exit_status = str(last_exit_status)
 
     parts = [
-        color(last_exit_status, foreground='red'),
+        color(last_exit_status, foreground='yellow', background='red'),
         virtualenv(),
         git_branch()
         ]

@@ -2,7 +2,7 @@
 # coding=utf-8
 
 # erzeugt Mittwoch, 11. März 2015 21:01 (C) 2015 von Leander Jedamus
-# modifiziert Montag, 21. September 2015 16:20 von Leander Jedamus
+# modifiziert Montag, 21. September 2015 16:25 von Leander Jedamus
 # modifiziert Samstag, 19. September 2015 18:36 von Leander Jedamus
 # modifiziert Mittwoch, 11. März 2015 21:03 von Leander Jedamus
 
@@ -212,7 +212,7 @@ def left_prompt():
         root_status = ''
 
     return "{zsh}{user} {cwd} {root}".format(
-            zsh=color("z", foreground='white', background='blue'),
+            zsh=color("z", foreground='yellow', background='blue'),
 	    user=color(get_username() + "@" + get_machname(), foreground='blue', background='yellow'),
             cwd=color(shorten_path(current_working_dir()), foreground='blue', background='red'),
             root=color(root_status, foreground='red')

@@ -23,9 +23,9 @@ def get_username():
 
 def get_machname():
     if socket.gethostname().find('.') >= 0:
-        name=socket.gethostname()
+        name = socket.gethostname()
     else:
-        name=socket.gethostbyaddr(socket.gethostname())[0]
+        name = socket.gethostbyaddr(socket.gethostname())[0]
     return name.split(".")[0]
 
 def _zero_width(s):

@@ -2,7 +2,7 @@
 # coding=utf-8
 
 # erzeugt Mittwoch, 11. März 2015 21:01 (C) 2015 von Leander Jedamus
-# modifiziert Montag, 21. September 2015 12:54 von Leander Jedamus
+# modifiziert Montag, 21. September 2015 16:20 von Leander Jedamus
 # modifiziert Samstag, 19. September 2015 18:36 von Leander Jedamus
 # modifiziert Mittwoch, 11. März 2015 21:03 von Leander Jedamus
 
@@ -17,6 +17,16 @@ import os.path
 import subprocess
 import socket
 
+def get_username():
+    import pwd
+    return pwd.getpwuid(os.getuid())[0]
+
+def get_machname():
+    if socket.gethostname().find('.')>=0:
+	name=socket.gethostname()
+    else:
+	name=socket.gethostbyaddr(socket.gethostname())[0]
+    return name.split(".")[0]
 
 def _zero_width(s):
     '''Return the given string, wrapped in zsh zero-width codes.
@@ -201,7 +211,9 @@ def left_prompt():
     else:
         root_status = ''
 
-    return "» {cwd} {root}".format(
+    return "{zsh}{user} {cwd} {root}".format(
+            zsh=color("z", foreground='white', background='blue'),
+	    user=color(get_username() + "@" + get_machname(), foreground='blue', background='yellow'),
             cwd=color(shorten_path(current_working_dir()), foreground='blue', background='red'),
             root=color(root_status, foreground='red')
             )

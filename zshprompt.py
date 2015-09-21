@@ -2,7 +2,7 @@
 # coding=utf-8
 
 # erzeugt Mittwoch, 11. März 2015 21:01 (C) 2015 von Leander Jedamus
-# modifiziert Montag, 21. September 2015 16:56 von Leander Jedamus
+# modifiziert Montag, 21. September 2015 17:01 von Leander Jedamus
 # modifiziert Samstag, 19. September 2015 18:36 von Leander Jedamus
 # modifiziert Mittwoch, 11. März 2015 21:03 von Leander Jedamus
 
@@ -248,9 +248,7 @@ def main():
             help="which zsh prompt to print (the left- or right-side prompt)")
     parser.add_argument('--last-exit-status', dest='last_exit_status',
             type=int,
-            help='the exit status (int) of the previous shell command '
-                 '(default: None, printing last exit status will not be '
-                 'supported)')
+            help='the exit status (int) of the previous shell command (default: None)')
     args = parser.parse_args()
     if args.side == 'left':
         print left_prompt()

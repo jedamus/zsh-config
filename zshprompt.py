@@ -17,9 +17,11 @@ import os.path
 import subprocess
 import socket
 
+
 def get_username():
     import pwd
     return pwd.getpwuid(os.getuid())[0]
+
 
 def get_machname():
     if socket.gethostname().find('.') >= 0:
@@ -27,6 +29,7 @@ def get_machname():
     else:
         name = socket.gethostbyaddr(socket.gethostname())[0]
     return name.split(".")[0]
+
 
 def _zero_width(s):
     '''Return the given string, wrapped in zsh zero-width codes.
@@ -94,6 +97,7 @@ def color(s, foreground=None, background=None, bold=False, underline=False,
     Also resets the colour and other attributes at the end of the string.
 
     '''
+
     if not s:
         return s
     if foreground:
@@ -213,7 +217,7 @@ def left_prompt():
 
     return "{zsh}{user} {cwd} {root}".format(
             zsh=color("z", foreground='yellow', background='blue'),
-	    user=color(get_username() + "@" + get_machname(), foreground='blue', background='yellow'),
+            user=color(get_username() + "@" + get_machname(), foreground='blue', background='yellow'),
             cwd=color(shorten_path(current_working_dir()), foreground='blue', background='red'),
             root=color(root_status, foreground='red')
             )

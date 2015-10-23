@@ -3,7 +3,7 @@ export OLDRPROMPT=$RPROMPT
 precmd() {
   stat=$?
   prmt=zshprompt.py
-  if [[ -x $prmt ]]; then
+  if [[ -d ./.git ]]; then
     export PROMPT="${$($prmt left):-$PROMPT}"
     export RPROMPT="${$($prmt right --last-exit-status $stat):-$RPROMPT}"
   else

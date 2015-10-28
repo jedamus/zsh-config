@@ -68,6 +68,9 @@ if [ -n "$PS1" ]; then
         cd .
       }
     };# ssh()
+    # when there's "highlighters directory not found" error message
+    # export ZSH_HIGHLIGHT_HIGHLIGHTERS_DIR=/usr/local/share/zsh-syntax-highlighting/highlighters
+    source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
   fi
 fi
 

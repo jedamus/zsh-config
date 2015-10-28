@@ -5,7 +5,7 @@ SAVEHIST=10000
 bindkey -e
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
-zstyle :compinstall filename '/home/ljedamus/.zshrc'
+zstyle :compinstall filename '/Users/leander/.zshrc'
 
 autoload -Uz compinit
 compinit
@@ -17,6 +17,7 @@ if [ $SHLVL -eq 1 ]; then
   export EQ="="
   source $HOME/.env
   unset EXPORT EQ
+  export GPG_TTY=$( tty ) # GnuPG 2.1 with Git, problem in zsh
 fi
 
 target=`uname -s`

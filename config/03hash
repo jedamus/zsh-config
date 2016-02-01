@@ -18,5 +18,7 @@ hash -d           make=$proj/make
 hash -d           perl=$proj/perl
 hash -d        fortran=$proj/fortran
 hash -d          cobol=$proj/cobol
+
+hash -d            fas="$HOME/Library/Scripts/Folder Action Scripts"
 unset doc
 unset proj

@@ -1,4 +1,3 @@
-# S.108
 autoload -U compinit && compinit
 
 zmodload -i zsh/complist
@@ -46,3 +45,8 @@ zstyle ':completion:*:*:sudo:*' command-path /sbin /usr/sbin /usr/local/sbin \
 #zstyle ':completion:*:*:a2ps:*:*' file-patterns \
 #  "(\.*|*.txt|*.sh|*.pl|*.py)" "*(-/)"
 zstyle ':completion:*:*:a2ps:*:*' none
+
+# 2016
+zstyle ':completion:*:zplugin:argument-rest:*' list-colors \
+      '=(#b)(*)/(*)==1;35=1;33'
+

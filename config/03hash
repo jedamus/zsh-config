@@ -3,7 +3,7 @@ proj=$HOME/Projekte
 hash -d            log=/var/log
 hash -d              d=/usr/share/doc
 hash -d          latex=$doc/latex
-hash -d          rezepte=$doc/latex/rezepte
+hash -d        rezepte=$doc/latex/rezepte
 hash -d            tex=$doc/tex
 hash -d          noweb=$doc/noweb
 hash -d           Word=$doc/Word
@@ -20,5 +20,6 @@ hash -d        fortran=$proj/fortran
 hash -d          cobol=$proj/cobol
 
 hash -d            fas="$HOME/Library/Scripts/Folder Action Scripts"
+hash -d             te=$proj/TextExpander
 unset doc
 unset proj

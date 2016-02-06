@@ -4,6 +4,20 @@ HISTSIZE=10000
 SAVEHIST=10000
 bindkey -e
 # End of lines configured by zsh-newuser-install
+
+target=`uname -s`
+case $target in
+  Darwin)
+    export machtype="MacOS"
+    ;;
+  Linux)
+    export machtype="Linux"
+    ;;
+  *)
+    export machtype="unknown"
+    ;;
+esac
+
 # The following lines were added by compinstall
 zstyle :compinstall filename '/Users/leander/.zshrc'
 
@@ -19,21 +33,6 @@ if [ $SHLVL -eq 1 ]; then
   unset EXPORT EQ
   export GPG_TTY=$( tty ) # GnuPG 2.1 with Git, problem in zsh
 fi
-
-target=`uname -s`
-
-case $target in
-  Darwin)
-    export machtype="MacOS"
-    ;;
-  Linux)
-    export machtype="Linux"
-    ;;
-  *)
-    export machtype="unknown"
-    ;;
-esac
-
 
 if [ -n "$PS1" ]; then
   #PS1=$'%{\e[1;33;44m%}z%{\e[1;32;40m%}%n@%m%{\e[0m%} %T [%{\e[1;32;10m%}%c%{\e[0m%}] $ ';

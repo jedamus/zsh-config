@@ -3,7 +3,8 @@ proj=$HOME/Projekte
 hash -d            log=/var/log
 hash -d              d=/usr/share/doc
 
-if [[ $machtype -eq "MacOS" ]]; then
+if [[ $machtype == "MacOS" ]]; then
+  print $machtype
   doc=$HOME/Documents
   hash -d          latex=$doc/latex
   hash -d        rezepte=$doc/latex/rezepte
@@ -25,7 +26,7 @@ hash -d           perl=$proj/perl
 hash -d        fortran=$proj/fortran
 hash -d          cobol=$proj/cobol
 
-if [[ $machtype -eq "MacOS" ]]; then
+if [[ $machtype == "MacOS" ]]; then
   hash -d            fas="$HOME/Library/Scripts/Folder Action Scripts"
   hash -d             te=$proj/TextExpander
   unset doc

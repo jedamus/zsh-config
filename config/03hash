@@ -4,7 +4,6 @@ hash -d            log=/var/log
 hash -d              d=/usr/share/doc
 
 if [[ $machtype == "MacOS" ]]; then
-  print $machtype
   doc=$HOME/Documents
   hash -d          latex=$doc/latex
   hash -d        rezepte=$doc/latex/rezepte

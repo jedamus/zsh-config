@@ -19,14 +19,20 @@ case $target in
 esac
 
 # The following lines were added by compinstall
-zstyle :compinstall filename '/Users/leander/.zshrc'
+if [[ $machtype -ne "MacOS" ]]; then
+  zstyle :compinstall filename '/home/cabox/.zshrc'
+else
+  zstyle :compinstall filename '/Users/leander/.zshrc'
+fi
 
 autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
 if [ $SHLVL -eq 1 ]; then
-  export PATH="$HOME/bin:/usr/local/texlive/2014/bin/x86_64-darwin:$PATH"
+  if [[ $machtype -eq "MacOS" ]]; then
+    export PATH="$HOME/bin:/usr/local/texlive/2014/bin/x86_64-darwin:$PATH"
+  fi
   export EXPORT="export"
   export EQ="="
   source $HOME/.env

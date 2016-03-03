@@ -1,0 +1,24 @@
+#> When I do substitution, can I do groups and patterns
+#> like in Emacs with \\1, \\2 to reference the
+#> particular matches, and thus construct the replace
+#> string out of them any way I like?
+#
+#You do it with $match, and if you need to refer to positions in the
+#original string, $mbegin and $mend.  See the description of the (#b)
+#pattern in the zshexpn manual page.
+#
+#local -a match mbegin mend
+#
+#if [[ $url = (#b)http://(*) ]]; then
+  print $match[1]
+#fi
+#
+#Works with other forms of pattern matching.
+
+url="http://www.test.de/"
+
+local -a match mbegin mend
+
+if [[ $url = (#b)http://(*) ]]; then
+  print $match[1]
+fi

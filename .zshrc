@@ -33,6 +33,9 @@ if [ $SHLVL -eq 1 ]; then
   if [[ $machtype == "MacOS" ]]; then
     export PATH="/usr/local/texlive/2014/bin/x86_64-darwin:$PATH"
   fi
+  if [ -x /usr/games/fortune ]; then
+    /usr/games/fortune
+  fi
   export EXPORT="export"
   export EQ="="
   source $HOME/.env
@@ -75,7 +78,7 @@ if [ -n "$PS1" ]; then
     };# ssh()
     # when there's "highlighters directory not found" error message
     # export ZSH_HIGHLIGHT_HIGHLIGHTERS_DIR=/usr/local/share/zsh-syntax-highlighting/highlighters
-    source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+    # source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
   fi
 fi
 

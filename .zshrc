@@ -48,9 +48,9 @@ if [ -n "$PS1" ]; then
   done
   if [ $SHLVL -eq 1 ]; then 
     if [ -x /usr/games/fortune ]; then
-      echo "${fg[cyan]}"
+      echo -n "${fg[cyan]}"
       /usr/games/fortune
-      echo "${bg[default]}"
+      echo -n "${bg[default]}"
     fi
 
     TODO=$HOME/todo.txt

@@ -33,9 +33,19 @@ if [ $SHLVL -eq 1 ]; then
   if [[ $machtype == "MacOS" ]]; then
     export PATH="/usr/local/texlive/2014/bin/x86_64-darwin:$PATH"
   fi
+
   if [ -x /usr/games/fortune ]; then
     /usr/games/fortune
   fi
+
+  TODO=$HOME/todo.txt
+  if [ -f $TODO ]; then
+    echo ""
+    echo "TODO-List:"
+    cat $TODO
+  fi
+  unset TODO
+
   export EXPORT="export"
   export EQ="="
   source $HOME/.env

@@ -34,18 +34,6 @@ if [ $SHLVL -eq 1 ]; then
     export PATH="/usr/local/texlive/2014/bin/x86_64-darwin:$PATH"
   fi
 
-  if [ -x /usr/games/fortune ]; then
-    /usr/games/fortune
-  fi
-
-  TODO=$HOME/todo.txt
-  if [ -f $TODO ]; then
-    echo ""
-    echo "TODO-List:"
-    cat $TODO
-  fi
-  unset TODO
-
   export EXPORT="export"
   export EQ="="
   source $HOME/.env
@@ -58,6 +46,23 @@ if [ -n "$PS1" ]; then
   for config in $HOME/zsh/config/[0-9][0-9]*; do
     source $config
   done
+  if [ $SHLVL -eq 1 ]; then 
+    if [ -x /usr/games/fortune ]; then
+      echo "${fg[cyan]}"
+      /usr/games/fortune
+      echo "${bg[default]}"
+    fi
+
+    TODO=$HOME/todo.txt
+    if [ -f $TODO ]; then
+      echo "${fg[yellow]}"
+      echo "TODO-List:"
+      cat $TODO
+      echo "${bg[default]}"
+    fi
+    unset TODO
+  fi
+
   #source $HOME/.zsh_prompt
   #source $HOME/.zsh_dircolors
   #source $HOME/.zsh_prompt_color

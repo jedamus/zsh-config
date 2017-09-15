@@ -46,21 +46,32 @@ if [ -n "$PS1" ]; then
   for config in $HOME/zsh/config/[0-9][0-9]*; do
     source $config
   done
+
   if [ $SHLVL -eq 1 ]; then 
-    if [ -x /usr/games/fortune ]; then
-      echo -n "${fg[cyan]}"
-      /usr/games/fortune
+    FORTUNE=/usr/games/fortune
+    NL="-n"
+    if [ -x $FORTUNE ]; then
+      echo -n "${fg[blue]}"
+      $FORTUNE
       echo -n "${bg[default]}"
+      NL=""
     fi
+    echo $NL
+    unset FORTUNE
 
     TODO=$HOME/todo.txt
+    NL="-n"
     if [ -f $TODO ]; then
-      echo "${fg[yellow]}"
+      echo -n "${fg[red]}"
       echo "TODO-List:"
       cat $TODO
-      echo "${bg[default]}"
+      echo -n "${bg[default]}"
+      NL=""
     fi
+    echo $NL
     unset TODO
+
+    unset NL
   fi
 
   #source $HOME/.zsh_prompt

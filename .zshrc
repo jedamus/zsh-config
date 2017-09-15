@@ -47,32 +47,9 @@ if [ -n "$PS1" ]; then
     source $config
   done
 
-  if [ $SHLVL -eq 1 ]; then 
-    FORTUNE=/usr/games/fortune
-    NL="-n"
-    if [ -x $FORTUNE ]; then
-      echo -n "${fg[blue]}"
-      $FORTUNE
-      echo -n "${bg[default]}"
-      NL=""
-    fi
-    echo $NL
-    unset FORTUNE
-
-    TODO=$HOME/todo.txt
-    NL="-n"
-    if [ -f $TODO ]; then
-      echo -n "${fg[red]}"
-      echo "TODO-List:"
-      cat $TODO
-      echo -n "${bg[default]}"
-      NL=""
-    fi
-    echo $NL
-    unset TODO
-
-    unset NL
-  fi
+  for output in $HOME/zsh/output/[0-9][0-9]*; do
+    source $output
+  done
 
   #source $HOME/.zsh_prompt
   #source $HOME/.zsh_dircolors

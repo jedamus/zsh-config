@@ -1,0 +1,12 @@
+if [ $SHLVL -eq 1 ]; then
+  FORTUNE=/usr/games/fortune
+  NL="-n"
+  if [ -x $FORTUNE ]; then
+    echo -n "${fg[blue]}"
+    $FORTUNE
+    echo -n "${bg[default]}"
+    NL=""
+  fi
+  echo $NL
+  unset FORTUNE NL
+fi

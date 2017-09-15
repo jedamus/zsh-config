@@ -4,7 +4,7 @@ if [ $SHLVL -eq 1 ]; then
   if [ -x $FORTUNE ]; then
     echo -n "${fg[blue]}"
     $FORTUNE
-    echo -n "${bg[default]}"
+    echo -n "${fg[default]}"
     NL=""
   fi
   echo $NL

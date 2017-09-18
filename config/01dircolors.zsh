@@ -1,3 +1,4 @@
+echo "$machtype"
 if [ $machtype != "MacOS" ]; then
   typeset -A COLORS
   COLORS[ex]="00;32"

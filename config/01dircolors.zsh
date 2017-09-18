@@ -1,4 +1,4 @@
-if [[ $machtype -ne "MacOS" ]]; then
+if [ $machtype != "MacOS" ]; then
   typeset -A COLORS
   COLORS[ex]="00;32"
   COLORS[fi]="00"

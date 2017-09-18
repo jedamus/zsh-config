@@ -19,7 +19,7 @@ case $target in
 esac
 
 # The following lines were added by compinstall
-if [[ $machtype == "MacOS" ]]; then
+if [ $machtype = "MacOS" ]; then
   zstyle :compinstall filename '/home/cabox/.zshrc'
 else
   zstyle :compinstall filename '/Users/leander/.zshrc'
@@ -30,7 +30,7 @@ compinit
 # End of lines added by compinstall
 
 if [ $SHLVL -eq 1 ]; then
-  if [[ $machtype == "MacOS" ]]; then
+  if [ $machtype = "MacOS" ]; then
     export PATH="/usr/local/texlive/2014/bin/x86_64-darwin:$PATH"
   fi
 
@@ -43,11 +43,11 @@ fi
 
 if [ -n "$PS1" ]; then
   #PS1=$'%{\e[1;33;44m%}z%{\e[1;32;40m%}%n@%m%{\e[0m%} %T [%{\e[1;32;10m%}%c%{\e[0m%}] $ ';
-  for config in $HOME/zsh/config/[0-9][0-9]*; do
+  for config in $HOME/zsh/config/[0-9][0-9]*.zsh; do
     source $config
   done
 
-  for output in $HOME/zsh/output/[0-9][0-9]*; do
+  for output in $HOME/zsh/output/[0-9][0-9]*.zsh; do
     source $output
   done
 

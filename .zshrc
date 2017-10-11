@@ -70,7 +70,7 @@ if [ -n "$PS1" ]; then
       # set_title "${USER}@${HOST}:${PWD}"
     # };# chpwd()
     cd .
-    vagrant ssh telnet su bash zsh tcsh()
+    vagrant ssh telnet su bash zsh tcsh screen tmux byobu()
     {
       set_title "$0 $@"
       {

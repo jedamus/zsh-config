@@ -18,15 +18,18 @@ case $target in
     ;;
 esac
 
-# The following lines were added by compinstall
+#set -x
+if [ $machtype = "Linux" ]; then
+  zstyle :compinstall filename '/home/leander/.zshrc'
+fi
 if [ $machtype = "MacOS" ]; then
-  zstyle :compinstall filename '/home/cabox/.zshrc'
-else
   zstyle :compinstall filename '/Users/leander/.zshrc'
 fi
+#set +x
 
-autoload -Uz compinit
-compinit
+# The following lines were added by compinstall
+autoload -Uz compinit; compinit
+#autoload -Uz promptinit; promptinit
 # End of lines added by compinstall
 
 if [ $SHLVL -eq 1 ]; then

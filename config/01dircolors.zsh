@@ -229,4 +229,6 @@ if [ $machtype != "MacOS" ]; then
   )
 
   alias ls="ls --color=auto"
+else
+  alias ls="ls -G"
 fi

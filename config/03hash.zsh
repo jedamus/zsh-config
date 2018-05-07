@@ -3,7 +3,7 @@ proj=$HOME/Projekte
 hash -d            log=/var/log
 hash -d              d=/usr/share/doc
 
-if [[ $machtype == "MacOS" ]]; then
+if [ $machtype = "MacOS" ]; then
   doc=$HOME/Documents
   hash -d          latex=$doc/latex
   hash -d        rezepte=$doc/latex/rezepte
@@ -16,6 +16,8 @@ if [[ $machtype == "MacOS" ]]; then
   hash -d        buecher=$doc/pdf/Bücher
   hash -d        eclipse=$doc/workspace
   hash -d android_studio=$doc/AndroidStudioProjects
+else
+  hash -d           www=/var/www
 fi
 
 hash -d        qpython=$proj/qpython
@@ -25,10 +27,13 @@ hash -d           perl=$proj/perl
 hash -d        fortran=$proj/fortran
 hash -d          cobol=$proj/cobol
 
-if [[ $machtype == "MacOS" ]]; then
+if [ $machtype = "MacOS" ]; then
   hash -d            fas="$HOME/Library/Scripts/Folder Action Scripts"
   hash -d             te=$proj/TextExpander
   unset doc
 fi
 
 unset proj
+
+# einfach ~python eingeben und die Shell wechselt in das entsprechende Verzeichnis
+setopt autocd

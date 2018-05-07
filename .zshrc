@@ -61,6 +61,7 @@ if [ -n "$PS1" ]; then
   # eigene Funktionen in ~/zsh/functions autogeladen
   fpath=(~/zsh/functions $fpath)
   autoload -U ${fpath[1]}/*(.N:t)
+  rationalize-dot
 
   if [ -n "$DISPLAY" ]; then
     set_title()

@@ -16,5 +16,4 @@ bindkey -e
 [[ -n "${key[PageDown]}" ]]  && bindkey  "${key[PageDown]}" history-substring-search-down
 
 # from Learning Shell Scripting with Zsh
-## lj funktioniert nicht
-#bindkey '\eQ' push-line-or-edit
+bindkey '^O' push-line-or-edit

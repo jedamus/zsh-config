@@ -2,7 +2,6 @@
 HISTFILE=~/.histfile
 HISTSIZE=10000
 SAVEHIST=10000
-bindkey -e
 # End of lines configured by zsh-newuser-install
 
 target=`uname -s`
@@ -89,10 +88,6 @@ if [ -n "$PS1" ]; then
   fi
 fi
 
-# set ZLE in emacs-mode
-bindkey -e
-
-#alias rm='rm -i'
 #alias cls='clear'
 #alias cd..='cd ..'
 #alias ll='ls -la'

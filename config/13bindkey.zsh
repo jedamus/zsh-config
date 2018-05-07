@@ -1,3 +1,5 @@
+bindkey -e
+
 # setup key accordingly
 [[ -n "${key[Home]}"     ]]  && bindkey  "${key[Home]}"     beginning-of-line
 [[ -n "${key[End]}"      ]]  && bindkey  "${key[End]}"      end-of-line
@@ -12,3 +14,7 @@
 
 [[ -n "${key[PageUp]}"   ]]  && bindkey  "${key[PageUp]}"   history-substring-search-up
 [[ -n "${key[PageDown]}" ]]  && bindkey  "${key[PageDown]}" history-substring-search-down
+
+# from Learning Shell Scripting with Zsh
+## lj funktioniert nicht
+#bindkey '\eQ' push-line-or-edit

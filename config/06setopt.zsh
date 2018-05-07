@@ -1,3 +1,4 @@
+setopt nocaseglob
 setopt extended_glob
 setopt append_history
 # setopt share_history

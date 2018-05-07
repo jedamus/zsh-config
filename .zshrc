@@ -88,6 +88,9 @@ if [ -n "$PS1" ]; then
   fi
 fi
 
+# set ZLE in emacs-mode
+bindkey -e
+
 #alias rm='rm -i'
 #alias cls='clear'
 #alias cd..='cd ..'

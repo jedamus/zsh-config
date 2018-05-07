@@ -4,6 +4,8 @@ HISTSIZE=10000
 SAVEHIST=10000
 # End of lines configured by zsh-newuser-install
 
+autoload zmv
+
 target=`uname -s`
 case $target in
   Darwin)

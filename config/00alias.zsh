@@ -37,10 +37,10 @@ alias a2ps='a2ps.pl'
 alias term2iso="echo 'Setting terminal to iso mode' ; print -n '\e%@'"
 alias term2utf="echo 'Setting terminal to utf-8 mode'; print -n '\e%G'"
 
-alias cp='nocorrect cp'         # no spelling correction on cp
-alias mkdir='nocorrect mkdir'   # no spelling correction on mkdir
-alias mv='nocorrect mv'         # no spelling correction on mv
-alias rm='nocorrect rm -i'         # no spelling correction on rm
+alias cp='nocorrect cp'           # no spelling correction on cp
+alias mkdir='nocorrect mkdir -pv' # no spelling correction on mkdir and make parent directory
+alias mv='nocorrect mv'           # no spelling correction on mv
+alias rm='nocorrect rm -i'        # no spelling correction on rm
 
 
 # global aliases

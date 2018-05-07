@@ -4,8 +4,6 @@ HISTSIZE=10000
 SAVEHIST=10000
 # End of lines configured by zsh-newuser-install
 
-autoload zmv
-
 target=`uname -s`
 case $target in
   Darwin)
@@ -29,7 +27,7 @@ fi
 #set +x
 
 # The following lines were added by compinstall
-autoload -Uz compinit; compinit
+#autoload -Uz compinit; compinit
 #autoload -Uz promptinit; promptinit
 # End of lines added by compinstall
 

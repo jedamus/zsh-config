@@ -46,6 +46,11 @@ fi
 
 if [ -n "$PS1" ]; then
   #PS1=$'%{\e[1;33;44m%}z%{\e[1;32;40m%}%n@%m%{\e[0m%} %T [%{\e[1;32;10m%}%c%{\e[0m%}] $ ';
+
+  # eigene Funktionen in ~/zsh/functions autogeladen
+  fpath=(~/zsh/functions $fpath)
+  autoload -U ${fpath[1]}/*(.N:t)
+
   for config in $HOME/zsh/config/[0-9][0-9]*.zsh; do
     source $config
   done
@@ -57,11 +62,6 @@ if [ -n "$PS1" ]; then
   #source $HOME/.zsh_prompt
   #source $HOME/.zsh_dircolors
   #source $HOME/.zsh_prompt_color
-
-  # eigene Funktionen in ~/zsh/functions autogeladen
-  fpath=(~/zsh/functions $fpath)
-  autoload -U ${fpath[1]}/*(.N:t)
-  rationalize-dot
 
   if [ -n "$DISPLAY" ]; then
     set_title()

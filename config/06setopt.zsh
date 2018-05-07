@@ -1,4 +1,5 @@
 setopt nocaseglob
+setopt csh_null_glob
 setopt extended_glob
 setopt append_history
 # setopt share_history

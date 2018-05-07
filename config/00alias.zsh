@@ -4,6 +4,7 @@ alias -s tex=$EDITOR
 alias -s sty=$EDITOR
 alias -s cls=$EDITOR
 alias -s pdf=evince
+alias -s ps=evince
 alias -s dvi=evince
 
 alias -s c=$EDITOR
@@ -40,3 +41,8 @@ alias cp='nocorrect cp'         # no spelling correction on cp
 alias mkdir='nocorrect mkdir'   # no spelling correction on mkdir
 alias mv='nocorrect mv'         # no spelling correction on mv
 alias rm='nocorrect rm -i'         # no spelling correction on rm
+
+
+# global aliases
+alias -g L='|less'
+alias -g NUL="> /dev/null 2>&1"

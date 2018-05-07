@@ -31,7 +31,7 @@ alias md='mkdir'
 alias rd='rmdir'
 alias dir='ls -la'
 alias cls='clear'
-alias a2ps='a2ps.pl'
+#alias a2ps='a2ps.pl'
 
 # see http://www.cl.cam.ac.uk/~mgk25/unicode.html#term for details
 alias term2iso="echo 'Setting terminal to iso mode' ; print -n '\e%@'"

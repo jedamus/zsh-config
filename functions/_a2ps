@@ -1,0 +1,39 @@
+#compdef a2ps
+
+# erzeugt Montag, 07. Mai 2018 20:33 (C) 2018 von Leander Jedamus
+# modifiziert Montag, 07. Mai 2018 20:38 von Leander Jedamus
+
+if [[ "$words[1]" != "$_cache_a2ps_cmd" ]]; then
+  local descr
+
+  _cache_a2ps_cmd="$words[1]"
+
+  descr=( "${(@)${(f@)$(_call_program features LC_ALL=C $words[1] --list=features)//
+ /	}:#}" )
+
+  _cache_a2ps_values=(
+    "${descr[(r)Known [Ss]tyle [Ss]heets*]#*	}"
+    "${descr[(r)Known [Ee]ncodings*]#*	}"
+    "${descr[(r)Known [Mm]edia*]#*	}"
+    "${descr[(r)Known [Pp]rologues*]#*	}"
+    "${descr[(r)Known PostScript Printer Descriptions*]#*	}"
+    "${descr[(r)Known [Oo]utputs*]#*	}"
+    "${descr[(r)Known [Uu]ser [Oo]ptions*]#*	}"
+    "${descr[(r)Known Variables*]#*	}"
+  )
+fi
+
+integer ret=1
+local context state line expl
+typeset -A opt_args
+
+_arguments \
+  '-P'"[send output to printer]:printer:->printers" \
+  '*:input file:_files' --
+
+if [[ $state = printers ]]; then
+  _wanted printers expl printer compadd -- ${=_cache_a2ps_values[6]} && ret=0
+  _printers && ret=0
+fi
+
+return ret

@@ -26,6 +26,7 @@ hash -d           make=$proj/make
 hash -d           perl=$proj/perl
 hash -d        fortran=$proj/fortran
 hash -d          cobol=$proj/cobol
+hash -d           ruby=$proj/ruby
 
 if [ $machtype = "MacOS" ]; then
   hash -d            fas="$HOME/Library/Scripts/Folder Action Scripts"

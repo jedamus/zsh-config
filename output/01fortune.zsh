@@ -3,7 +3,8 @@ if [ $SHLVL -eq 1 ]; then
   NL="-n"
   if [ -x $FORTUNE ]; then
     echo -n "${fg[blue]}"
-    $FORTUNE -s
+    #$FORTUNE -s
+    $FORTUNE linux
     echo -n "${fg[default]}"
     NL=""
   fi

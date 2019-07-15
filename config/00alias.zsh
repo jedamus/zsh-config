@@ -42,6 +42,7 @@ alias mkdir='nocorrect mkdir -pv' # no spelling correction on mkdir and make par
 alias mv='nocorrect mv'           # no spelling correction on mv
 alias rm='nocorrect rm -i'        # no spelling correction on rm
 
+alias fl='fortune linux'
 
 # global aliases
 alias -g L='|less'

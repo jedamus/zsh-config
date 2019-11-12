@@ -1,6 +1,7 @@
 proj=$HOME/Projekte
 
 hash -d            log=/var/log
+# modifiziert Dienstag, 12. November 2019 11:39 von Leander Jedamus
 hash -d              d=/usr/share/doc
 
 if [ $machtype = "MacOS" ]; then
@@ -27,6 +28,7 @@ hash -d           perl=$proj/perl
 hash -d        fortran=$proj/fortran
 hash -d          cobol=$proj/cobol
 hash -d           ruby=$proj/ruby
+hash -d           c=$proj/c
 
 if [ $machtype = "MacOS" ]; then
   hash -d            fas="$HOME/Library/Scripts/Folder Action Scripts"

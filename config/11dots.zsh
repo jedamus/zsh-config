@@ -1,7 +1,7 @@
 
 
-
-# modifiziert Samstag, 26. September 2020 19:32 von Leander Jedamus
+# erzeugt Samstag, 26. September 2020 19:29 (C) 2020 von Leander Jedamus
+# modifiziert Samstag, 26. September 2020 20:36 von Leander Jedamus
 
 # ESC 4. erzeugt ../../../..
 # ^X. gibt Pfad aus

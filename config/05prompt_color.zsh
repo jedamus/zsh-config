@@ -1,7 +1,7 @@
 
 
 # erzeugt Samstag, 26. September 2020 19:29 (C) 2020 von Leander Jedamus
-# modifiziert Samstag, 26. September 2020 20:35 von Leander Jedamus
+# modifiziert Samstag, 26. September 2020 20:49 von Leander Jedamus
 
 color_cmd() {
   res=$(builtin type $1 2>/dev/null)
@@ -73,3 +73,6 @@ check-cmd-backward-delete-char() { zle .backward-delete-char && recolor-cmd }
 zle -N self-insert check-cmd-self-insert
 #zle -N expand-or-complete check-cmd-expand-or-complete
 zle -N backward-delete-char check-cmd-backward-delete-char
+
+# vim:ai sw=2
+

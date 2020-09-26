@@ -1,7 +1,7 @@
 
 
 # erzeugt Samstag, 26. September 2020 19:29 (C) 2020 von Leander Jedamus
-# modifiziert Samstag, 26. September 2020 20:34 von Leander Jedamus
+# modifiziert Samstag, 26. September 2020 20:49 von Leander Jedamus
 
 if [ $machtype != "MacOS" ]; then
   typeset -A COLORS
@@ -237,3 +237,6 @@ if [ $machtype != "MacOS" ]; then
 else
   alias ls="ls -G"
 fi
+
+# vim:ai sw=2
+

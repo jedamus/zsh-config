@@ -1,7 +1,7 @@
 
 
 # erzeugt Samstag, 26. September 2020 19:29 (C) 2020 von Leander Jedamus
-# modifiziert Samstag, 26. September 2020 20:35 von Leander Jedamus
+# modifiziert Samstag, 26. September 2020 20:49 von Leander Jedamus
 
 # colors
 
@@ -18,4 +18,6 @@ for i in ${(k)bg};bgp[$i]=%{${bg[$i]}%}
 
 export PS1="${fgp[yellow]}${bgp[blue]}z${fgp[blue]}${bgp[yellow]}%n@%m${fgp[default]}${bgp[default]} %T (%!) %(!.#.$) ";
 export RPROMPT="${fgp[green]}%4~${fgp[default]}${fgp[red]}%(?.. :( %?)${fgp[default]}";
+
+# vim:ai sw=2
 

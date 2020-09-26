@@ -1,7 +1,7 @@
 
 
 # erzeugt Samstag, 26. September 2020 19:29 (C) 2020 von Leander Jedamus
-# modifiziert Samstag, 26. September 2020 20:36 von Leander Jedamus
+# modifiziert Samstag, 26. September 2020 20:50 von Leander Jedamus
 
 # ESC 4. erzeugt ../../../..
 # ^X. gibt Pfad aus
@@ -44,4 +44,6 @@ function _split_shell_arguments_under()
   fi
   REPLY=${reply[$REPLY]}
 }
+
+# vim:ai sw=2
 

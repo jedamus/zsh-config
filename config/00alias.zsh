@@ -1,7 +1,7 @@
 
 
 # erzeugt Samstag, 26. September 2020 19:29 (C) 2020 von Leander Jedamus
-# modifiziert Samstag, 26. September 2020 20:34 von Leander Jedamus
+# modifiziert Samstag, 26. September 2020 20:48 von Leander Jedamus
 
 alias -s txt=$EDITOR
 
@@ -52,3 +52,6 @@ alias fl='fortune linux'
 # global aliases
 alias -g L='|less'
 alias -g NUL="> /dev/null 2>&1"
+
+# vim:ai sw=2
+

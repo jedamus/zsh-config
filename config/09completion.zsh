@@ -1,7 +1,7 @@
 
 
 # erzeugt Samstag, 26. September 2020 19:29 (C) 2020 von Leander Jedamus
-# modifiziert Samstag, 26. September 2020 20:36 von Leander Jedamus
+# modifiziert Samstag, 26. September 2020 20:50 von Leander Jedamus
 
 autoload -U compinit && compinit
 
@@ -73,4 +73,6 @@ zstyle ':completion:*:*:a2ps:*:*' none
 # 2016
 zstyle ':completion:*:zplugin:argument-rest:*' list-colors \
       '=(#b)(*)/(*)==1;35=1;33'
+
+# vim:ai sw=2
 

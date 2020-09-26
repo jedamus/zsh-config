@@ -1,7 +1,7 @@
 
 
 # erzeugt Samstag, 26. September 2020 19:29 (C) 2020 von Leander Jedamus
-# modifiziert Samstag, 26. September 2020 20:36 von Leander Jedamus
+# modifiziert Samstag, 26. September 2020 20:50 von Leander Jedamus
 
 # All commands with space in front should not get into HISTFILE
 setopt hist_ignore_space
@@ -13,3 +13,6 @@ for cmd in ls rm cd pwd wipe; do
     eval "alias $cmd=' $aliases[$cmd]'"
   fi
 done
+
+# vim:ai sw=2
+

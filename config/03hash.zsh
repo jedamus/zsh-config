@@ -1,7 +1,7 @@
 
 
 # erzeugt Samstag, 26. September 2020 19:29 (C) 2020 von Leander Jedamus
-# modifiziert Samstag, 26. September 2020 20:35 von Leander Jedamus
+# modifiziert Samstag, 26. September 2020 20:49 von Leander Jedamus
 
 proj=$HOME/Projekte
 
@@ -49,3 +49,6 @@ unset proj
 
 # einfach ~python eingeben und die Shell wechselt in das entsprechende Verzeichnis
 setopt autocd
+
+# vim:ai sw=2
+

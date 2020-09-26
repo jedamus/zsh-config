@@ -1,7 +1,7 @@
 
 
 # erzeugt Samstag, 26. September 2020 19:29 (C) 2020 von Leander Jedamus
-# modifiziert Samstag, 26. September 2020 20:35 von Leander Jedamus
+# modifiziert Samstag, 26. September 2020 20:50 von Leander Jedamus
 
 DIRSTACKSIZE=20
 DIRSTACKFILE=$HOME/.zsh_dirs
@@ -36,4 +36,6 @@ chpwd() {
     builtin print -l ${(u)my_stack} >! $DIRSTACKFILE
     # uprint my_stack >! $DIRSTACKFILE
 }
+
+# vim:ai sw=2
 

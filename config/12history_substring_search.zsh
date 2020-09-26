@@ -1,7 +1,7 @@
 
 
 # erzeugt Samstag, 26. September 2020 19:29 (C) 2020 von Leander Jedamus
-# modifiziert Samstag, 26. September 2020 20:37 von Leander Jedamus
+# modifiziert Samstag, 26. September 2020 20:51 von Leander Jedamus
 
 ##############################################################################
 #
@@ -554,3 +554,4 @@ function _history-substring-search-down-search() {
 
 # -*- mode: zsh; sh-indentation: 2; indent-tabs-mode: nil; sh-basic-offset: 2; -*-
 # vim: ft=zsh sw=2 ts=2 et
+

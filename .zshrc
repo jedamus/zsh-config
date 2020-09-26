@@ -4,6 +4,8 @@ HISTSIZE=10000
 SAVEHIST=10000
 # End of lines configured by zsh-newuser-install
 
+autoload zmv
+
 target=`uname -s`
 case $target in
   Darwin)
@@ -27,7 +29,7 @@ fi
 #set +x
 
 # The following lines were added by compinstall
-#autoload -Uz compinit; compinit
+autoload -Uz compinit; compinit
 #autoload -Uz promptinit; promptinit
 # End of lines added by compinstall
 
@@ -73,7 +75,7 @@ if [ -n "$PS1" ]; then
       # set_title "${USER}@${HOST}:${PWD}"
     # };# chpwd()
     cd .
-    vagrant ssh telnet su bash zsh tcsh screen tmux byobu()
+    vagrant ssh telnet su sudo bash zsh tcsh screen tmux byobu()
     {
       set_title "$0 $@"
       {

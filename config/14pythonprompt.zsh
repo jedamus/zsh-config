@@ -1,3 +1,8 @@
+
+
+
+# modifiziert Samstag, 26. September 2020 19:33 von Leander Jedamus
+
 export OLDPROMPT=$PROMPT
 export OLDRPROMPT=$RPROMPT
 precmd() {

@@ -1,3 +1,8 @@
+
+
+
+# modifiziert Samstag, 26. September 2020 19:31 von Leander Jedamus
+
 proj=$HOME/Projekte
 
 hash -d            log=/var/log

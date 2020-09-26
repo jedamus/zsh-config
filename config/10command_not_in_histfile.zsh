@@ -1,3 +1,8 @@
+
+
+
+# modifiziert Samstag, 26. September 2020 19:32 von Leander Jedamus
+
 # All commands with space in front should not get into HISTFILE
 setopt hist_ignore_space
 

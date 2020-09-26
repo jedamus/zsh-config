@@ -1,3 +1,8 @@
+
+
+
+# modifiziert Samstag, 26. September 2020 19:31 von Leander Jedamus
+
 color_cmd() {
   res=$(builtin type $1 2>/dev/null)
   [ -z $res ] && return

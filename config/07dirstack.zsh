@@ -1,3 +1,8 @@
+
+
+
+# modifiziert Samstag, 26. September 2020 19:32 von Leander Jedamus
+
 DIRSTACKSIZE=20
 DIRSTACKFILE=$HOME/.zsh_dirs
 

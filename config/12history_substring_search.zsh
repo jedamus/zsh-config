@@ -1,4 +1,8 @@
-#!/usr/bin/env zsh
+
+
+
+# modifiziert Samstag, 26. September 2020 19:33 von Leander Jedamus
+
 ##############################################################################
 #
 # Copyright (c) 2009 Peter Stephenson

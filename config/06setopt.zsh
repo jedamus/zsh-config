@@ -1,3 +1,8 @@
+
+
+
+# modifiziert Samstag, 26. September 2020 19:31 von Leander Jedamus
+
 setopt nocaseglob
 setopt csh_null_glob
 setopt extended_glob

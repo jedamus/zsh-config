@@ -1,3 +1,8 @@
+
+
+
+# modifiziert Samstag, 26. September 2020 19:30 von Leander Jedamus
+
 alias -s txt=$EDITOR
 
 alias -s tex=$EDITOR

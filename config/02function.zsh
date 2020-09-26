@@ -1,4 +1,8 @@
 
+
+
+# modifiziert Samstag, 26. September 2020 19:31 von Leander Jedamus
+
 Start Restart Stop Reload()
 {
   sudo /etc/init.d/$1 ${0:l}

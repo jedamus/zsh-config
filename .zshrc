@@ -64,30 +64,9 @@ if [ -n "$PS1" ]; then
   #source $HOME/.zsh_dircolors
   #source $HOME/.zsh_prompt_color
 
-  if [ -n "$DISPLAY" ]; then
-    set_title()
-    {
-      echo -n "\e]2;${@}\007"
-    };# set_title()
-    functions[chpwd]="set_title \"\$USER@\$HOST:\$PWD\";$functions[chpwd]"
-    # chpwd()
-    # {
-      # set_title "${USER}@${HOST}:${PWD}"
-    # };# chpwd()
-    cd .
-    vagrant ssh telnet su sudo bash zsh tcsh screen tmux byobu()
-    {
-      set_title "$0 $@"
-      {
-        command $0 "$@"
-      } always {
-        cd .
-      }
-    };# ssh()
-    # when there's "highlighters directory not found" error message
-    # export ZSH_HIGHLIGHT_HIGHLIGHTERS_DIR=/usr/local/share/zsh-syntax-highlighting/highlighters
-    # source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-  fi
+  # when there's "highlighters directory not found" error message
+  # export ZSH_HIGHLIGHT_HIGHLIGHTERS_DIR=/usr/local/share/zsh-syntax-highlighting/highlighters
+  # source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 fi
 
 #alias cls='clear'

@@ -1,3 +1,8 @@
+
+
+
+# modifiziert Samstag, 26. September 2020 19:31 von Leander Jedamus
+
 if [ $machtype != "MacOS" ]; then
   typeset -A COLORS
   COLORS[ex]="00;32"

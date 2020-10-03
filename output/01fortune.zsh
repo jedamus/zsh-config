@@ -1,7 +1,7 @@
 
 
 # erzeugt Samstag, 26. September 2020 19:29 (C) 2020 von Leander Jedamus
-# modifiziert Samstag, 03. Oktober 2020 03:32 von Leander Jedamus
+# modifiziert Samstag, 03. Oktober 2020 03:37 von Leander Jedamus
 # modifiziert Samstag, 26. September 2020 21:24 von Leander Jedamus
 
 fort() {
@@ -10,7 +10,7 @@ fort() {
   if [ -x $FORTUNE ]; then
     echo -n "${fg[blue]}"
     #$FORTUNE -s
-    $FORTUNE $1
+    $FORTUNE $@
     echo -n "${fg[default]}"
     NL=""
   fi

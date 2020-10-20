@@ -1,0 +1,9 @@
+#compdef rep.sh
+
+_arguments -C -s \
+  '--help[display help]' \
+  '--clear[clear display before executing command]' \
+  '--sleep[sleep n seconds before executing command]' \
+  && ret=0
+
+return ret

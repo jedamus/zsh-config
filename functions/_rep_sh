@@ -1,4 +1,4 @@
-#compdef rep.sh
+#compdef rep.sh ogg.sh
 
 local ret=1
 

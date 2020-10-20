@@ -1,5 +1,7 @@
 #compdef rep.sh
 
+local ret=1
+
 _arguments -C -s \
   '--help[display help]' \
   '--clear[clear display before executing command]' \

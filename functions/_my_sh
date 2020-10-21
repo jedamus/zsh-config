@@ -1,4 +1,4 @@
-#compdef gitinit.sh mount_iso.sh stick_backup.sh chmodchown.sh man2pdf.sh man2ps.sh printman.sh
+#compdef gitinit.sh mount_iso.sh stick_backup.sh chmodchown.sh
 
 local ret=1
 

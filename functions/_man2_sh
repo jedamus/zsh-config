@@ -1,0 +1,13 @@
+#compdef man2pdf.sh man2ps.sh printman.sh
+
+local ret=1
+
+_arguments -C -s \
+  '--help[display help]' \
+  '*:files:->files' \
+  && ret=0
+
+_description files expl 'file to convert'
+_files "$expl[@]" -g '*.gz(-.)' 
+
+return ret

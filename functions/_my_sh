@@ -1,4 +1,4 @@
-#compdef gitinit.sh stick_backup.sh
+#compdef gitinit.sh
 
 local ret=1
 

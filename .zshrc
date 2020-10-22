@@ -82,7 +82,7 @@ if [ -n "$PS1" ]; then
   unset __conda_setup
   # <<< conda initialize <<<
 
-  echo "done"
+  echo "done\n"
 
 fi
 

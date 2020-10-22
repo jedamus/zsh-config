@@ -5,7 +5,7 @@ local ret=1
 _arguments -C -s \
   '--help[display help]' \
   '--clear[clear display before executing command]' \
-  '--sleep[sleep n seconds before executing command]: :_guard "[0−9]#" "numeric value"' \
+  '--sleep[sleep n seconds before executing command]: :_guard "[0−9]#" "seconds to sleep"' \
   && ret=0
 
 return ret

@@ -1,4 +1,4 @@
-#compdef gitinit.sh stick_backup.sh chmodchown.sh
+#compdef gitinit.sh stick_backup.sh
 
 local ret=1
 

@@ -1,0 +1,14 @@
+#compdef chmodchown.sh
+
+local ret=1
+
+_arguments -C -s \
+  '--help[display help]' \
+  '*:files:->files' \
+  && ret=0
+
+_description files expl 'directory'
+
+_files "$expl[@]" -g '(-.)' 
+
+return ret

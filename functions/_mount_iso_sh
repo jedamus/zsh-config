@@ -1,0 +1,14 @@
+#compdef mount_iso.sh
+
+local ret=1
+
+_arguments -C -s \
+  '--help[display help]' \
+  '*:files:->files' \
+  && ret=0
+
+_description files expl 'iso-file'
+
+_files "$expl[@]" -g '*.iso(-.)' 
+
+return ret

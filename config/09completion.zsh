@@ -1,7 +1,7 @@
 
 
 # erzeugt Samstag, 26. September 2020 19:29 (C) 2020 von Leander Jedamus
-# modifiziert Freitag, 23. Oktober 2020 10:45 von Leander Jedamus
+# modifiziert Freitag, 23. Oktober 2020 11:25 von Leander Jedamus
 # modifiziert Samstag, 26. September 2020 20:50 von Leander Jedamus
 
 autoload -U compinit && compinit
@@ -75,7 +75,7 @@ zstyle ':completion:*:*:a2ps:*:*' none
 zstyle ':completion:*:zplugin:argument-rest:*' list-colors \
       '=(#b)(*)/(*)==1;35=1;33'
 
-# complete after redirecting (">") with *.log
+#lj2020: complete after redirecting (">") with *.log
 zstyle ':completion:*:*:-redirect-,>,*:*' file-patterns '*.log'
 
 # vim:ai sw=2

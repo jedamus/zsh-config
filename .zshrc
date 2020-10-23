@@ -1,6 +1,11 @@
 # ~/.zshrc
 #echo "ich bin .zshrc"
 
+# The following lines were added by compinstall
+autoload -Uz compinit; compinit
+#autoload -Uz promptinit; promptinit
+# End of lines added by compinstall
+
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
 HISTSIZE=10000
@@ -31,10 +36,6 @@ if [ $machtype = "MacOS" ]; then
 fi
 #set +x
 
-# The following lines were added by compinstall
-autoload -Uz compinit; compinit
-#autoload -Uz promptinit; promptinit
-# End of lines added by compinstall
 
 if [ $SHLVL -eq 1 ]; then
   if [ $machtype = "MacOS" ]; then

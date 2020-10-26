@@ -53,14 +53,14 @@ if [ -n "$PS1" ]; then
   #PS1=$'%{\e[1;33;44m%}z%{\e[1;32;40m%}%n@%m%{\e[0m%} %T [%{\e[1;32;10m%}%c%{\e[0m%}] $ ';
 
   # eigene Funktionen in ~/zsh/functions autogeladen
-  fpath=(~/zsh/functions $fpath)
+  fpath=(~/.zsh/functions $fpath)
   autoload -U ${fpath[1]}/*(.N:t)
 
-  for config in $HOME/zsh/config/[0-9][0-9]*.zsh; do
+  for config in $HOME/.zsh/config/[0-9][0-9]*.zsh; do
     source $config
   done
 
-  for output in $HOME/zsh/output/[0-9][0-9]*.zsh; do
+  for output in $HOME/.zsh/output/[0-9][0-9]*.zsh; do
     source $output
   done
 
@@ -74,8 +74,8 @@ if [ -n "$PS1" ]; then
 
   echo -n "initializing conda ... "
 
-  # >>> conda initialize >>>
   cd $HOME
+  # >>> conda initialize >>>
   __conda_setup="$('./anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
   if [ $? -eq 0 ]; then
     eval "$__conda_setup"

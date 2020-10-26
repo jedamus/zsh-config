@@ -72,19 +72,20 @@ if [ -n "$PS1" ]; then
   # export ZSH_HIGHLIGHT_HIGHLIGHTERS_DIR=/usr/local/share/zsh-syntax-highlighting/highlighters
   # source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-  echo -n "initializing conda ... "
+  if [ $machtype = "Linux" ]; then
+    echo -n "initializing conda ... "
 
-  cd $HOME
-  # >>> conda initialize >>>
-  __conda_setup="$('./anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-  if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
+    cd $HOME
+    # >>> conda initialize >>>
+    __conda_setup="$('./anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+    if [ $? -eq 0 ]; then
+      eval "$__conda_setup"
+    fi
+    unset __conda_setup
+    # <<< conda initialize <<<
+
+    echo "done\n"
   fi
-  unset __conda_setup
-  # <<< conda initialize <<<
-
-  echo "done\n"
-
 fi
 
 #alias cls='clear'

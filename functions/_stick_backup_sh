@@ -1,6 +1,6 @@
 #compdef stick_backup.sh
 
-local ret=1
+local expl ret=1
 
 _arguments -C -s \
   '--help[display help]' \

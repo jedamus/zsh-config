@@ -1,7 +1,7 @@
 
 
 # erzeugt Montag, 26. Oktober 2020 18:21 (C) 2020 von Leander Jedamus
-# modifiziert Montag, 26. Oktober 2020 19:19 von Leander Jedamus
+# modifiziert Montag, 26. Oktober 2020 19:47 von Leander Jedamus
 
 run-with-sudo() { LBUFFER="sudo $LBUFFER" }
 zle -N run-with-sudo
@@ -31,18 +31,18 @@ global-alias-space() {
 zle -N global-alias-space
 bindkey ' ' global-alias-space
 
-##overwrite-mode() {
-##  (( ${+mode} )) || local mode
-##  if [[ -z $mode ]]; then
-##    RPROMPT+=' (overwrite)'
-##    mode='overwrite'
-##  else
-##    RPROMPT="${RPROMPT% (overwrite)}"
-##    mode=''
-##  fi
-##  zle reset-prompt
-##  zle .overwrite-mode
-##}
+does-not-work_overwrite-mode() {
+  (( ${+mode} )) || local mode
+  if [[ -z $mode ]]; then
+    RPROMPT+=' (overwrite)'
+    mode='overwrite'
+  else
+    RPROMPT="${RPROMPT% \(overwrite\)}"
+    mode=''
+  fi
+  zle reset-prompt
+  zle .overwrite-mode
+}
 
 # vim:ft=zsh ai sw=2 ts=2 et
 

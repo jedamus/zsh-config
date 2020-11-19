@@ -44,7 +44,7 @@ if [ $SHLVL -eq 1 ]; then
 
   export EXPORT="export"
   export EQ="="
-  source $HOME/.myenv
+  source $HOME/.shenv
   unset EXPORT EQ
   export GPG_TTY=$( tty ) # GnuPG 2.1 with Git, problem in zsh
 fi

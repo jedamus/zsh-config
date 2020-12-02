@@ -1,7 +1,7 @@
 
 
 # erzeugt Samstag, 26. September 2020 19:29 (C) 2020 von Leander Jedamus
-# modifiziert Mittwoch, 02. Dezember 2020 15:36 von Leander Jedamus
+# modifiziert Mittwoch, 02. Dezember 2020 17:05 von Leander Jedamus
 # modifiziert Samstag, 26. September 2020 20:49 von Leander Jedamus
 
 if [ $machtype != "MacOS" ]; then
@@ -71,12 +71,15 @@ if [ $machtype != "MacOS" ]; then
       # Office Dokumente
       "*.odb=${COLORS[doc]}" # Datenbank
       "*.odp=${COLORS[doc]}" # Präsentation
-      "*.ppt=${COLORS[doc]}" # Präsentation
       "*.ods=${COLORS[doc]}" # Tabelle
-      "*.xls=${COLORS[doc]}" # Tabelle
       "*.odt=${COLORS[doc]}" # Text
       "*.ott=${COLORS[doc]}" # Text Vorlage
       "*.doc=${COLORS[doc]}" # Text
+      "*.ppt=${COLORS[doc]}" # Präsentation
+      "*.xls=${COLORS[doc]}" # Tabelle
+      "*.docx=${COLORS[doc]}" # Text
+      "*.pptx=${COLORS[doc]}" # Präsentation
+      "*.xlsx=${COLORS[doc]}" # Tabelle
 
       # archives or compressed
       "*.tar=${COLORS[archive]}"

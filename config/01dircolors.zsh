@@ -1,7 +1,7 @@
 
 
 # erzeugt Samstag, 26. September 2020 19:29 (C) 2020 von Leander Jedamus
-# modifiziert Mittwoch, 02. Dezember 2020 17:05 von Leander Jedamus
+# modifiziert Mittwoch, 02. Dezember 2020 19:44 von Leander Jedamus
 # modifiziert Samstag, 26. September 2020 20:49 von Leander Jedamus
 
 if [ $machtype != "MacOS" ]; then
@@ -58,12 +58,13 @@ if [ $machtype != "MacOS" ]; then
       # executables
       "*.cmd=${COLORS[ex]}"  # unnecessary
       "*.exe=${COLORS[ex]}"  # dito
-
+      
+      # scripts
       "*.sh=${COLORS[script]}"
       "*.mksh=${COLORS[script]}"
-      "*.bash=${COLORS[script]}"
       "*.csh=${COLORS[script]}"
       "*.tcsh=${COLORS[script]}"
+      "*.bash=${COLORS[script]}"
       "*.zsh=${COLORS[script]}"
       "*.php=${COLORS[script]}"
       "*.cgi=${COLORS[script]}"
@@ -149,9 +150,13 @@ if [ $machtype != "MacOS" ]; then
       "*.cxx=${COLORS[source]}"
       "*.CXX=${COLORS[source]}"
       "*.java=${COLORS[source]}"
+      "*.jsp=${COLORS[source]}"
       "*.scm=${COLORS[source]}"
       "*.pl=${COLORS[source]}"
+      "*.pm=${COLORS[source]}"
       "*.py=${COLORS[source]}"
+      "*.pyw=${COLORS[source]}"
+      "*.rb=${COLORS[source]}"
       "*.m=${COLORS[source]}"
       "*.F=${COLORS[source]}"
       "*.cob=${COLORS[source]}"
@@ -162,6 +167,10 @@ if [ $machtype != "MacOS" ]; then
       "*.adb=${COLORS[source]}"
       "*.l=${COLORS[source]}"
       "*.y=${COLORS[source]}"
+      "*.sql=${COLORS[source]}"
+      "*.js=${COLORS[source]}"
+      "*.lisp=${COLORS[source]}"
+      "*.pas=${COLORS[source]}"
       
       # preprocessed files (or those that should not be preprocessed)
       "*.i=${COLORS[preprocessed]}"
@@ -185,7 +194,8 @@ if [ $machtype != "MacOS" ]; then
       "*.hh=${COLORS[header]}"
       "*.H=${COLORS[header]}"
       "*.hpp=${COLORS[header]}"
-      # XXX is hxx valid?
+      "*.h++=${COLORS[header]}"
+      "*.hxx=${COLORS[header]}"
       "*.ads=${COLORS[header]}" # OK?
       
 
@@ -197,19 +207,26 @@ if [ $machtype != "MacOS" ]; then
 
       # markup files # XXX ?
       "*.html=${COLORS[markup]}"
+      "*.css=${COLORS[markup]}"
       "*.htm=${COLORS[markup]}"
       "*.HTM=${COLORS[markup]}"
       "*.xml=${COLORS[markup]}"
       "*.properties=${COLORS[markup]}"
       "*.shtml=${COLORS[markup]}"
       "*.xhtml=${COLORS[markup]}"
-      "*.tex=${COLORS[markup]}"
-      "*.sty=${COLORS[markup]}"
       "*.nw=${COLORS[markup]}"
       "*.txt=${COLORS[markup]}"
       "*.TXT=${COLORS[markup]}"
       "*.lyx=${COLORS[markup]}"
       "*.mgp=${COLORS[markup]}"
+
+      "*.tex=${COLORS[markup]}"
+      "*.sty=${COLORS[markup]}"
+      "*.fd=${COLORS[markup]}"
+      "*.cls=${COLORS[markup]}"
+      "*.def=${COLORS[markup]}"
+      "*.cfg=${COLORS[markup]}"
+      "*.ltx=${COLORS[markup]}"
 
       # printable
       "*.ps=${COLORS[printable]}" 

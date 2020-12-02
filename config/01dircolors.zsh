@@ -1,6 +1,7 @@
 
 
 # erzeugt Samstag, 26. September 2020 19:29 (C) 2020 von Leander Jedamus
+# modifiziert Mittwoch, 02. Dezember 2020 15:36 von Leander Jedamus
 # modifiziert Samstag, 26. September 2020 20:49 von Leander Jedamus
 
 if [ $machtype != "MacOS" ]; then
@@ -8,7 +9,7 @@ if [ $machtype != "MacOS" ]; then
   COLORS[ex]="00;32"
   COLORS[fi]="00"
   COLORS[no]="00"
-  COLORS[di]="00;36"
+  COLORS[di]="01;34"
   COLORS[ln]="target"
   COLORS[pi]="40;33"
   COLORS[so]="00;35"
@@ -18,7 +19,9 @@ if [ $machtype != "MacOS" ]; then
   COLORS[mi]="01;05;37;41"
 
   COLORS[script]="00;32"
-  COLORS[archive]="00;36"
+  COLORS[archive]="01;31"
+  COLORS[packet]="01;30"
+  COLORS[java]="00;36"
   COLORS[image]="00;35"
   COLORS[backup]="04"
   COLORS[readme]="31;04"
@@ -37,7 +40,7 @@ if [ $machtype != "MacOS" ]; then
 
   # linux: typeset -xUT LS_COLORS ls_colors
   # mac os: typeset -xUT LSCOLORS ls_colors
-  typeset -xUT LSCOLORS ls_colors
+  typeset -xUT LS_COLORS ls_colors
   ls_colors=(
       # meta
       "no=${COLORS[no]}"
@@ -57,10 +60,11 @@ if [ $machtype != "MacOS" ]; then
       "*.exe=${COLORS[ex]}"  # dito
 
       "*.sh=${COLORS[script]}"
-      "*.csh=${COLORS[script]}"
+      "*.mksh=${COLORS[script]}"
       "*.bash=${COLORS[script]}"
+      "*.csh=${COLORS[script]}"
+      "*.tcsh=${COLORS[script]}"
       "*.zsh=${COLORS[script]}"
-      "*.pl=${COLORS[script]}"
       "*.php=${COLORS[script]}"
       "*.cgi=${COLORS[script]}"
 
@@ -88,14 +92,17 @@ if [ $machtype != "MacOS" ]; then
       "*.xz=${COLORS[archive]}"
       "*.bz=${COLORS[archive]}"
       "*.tz=${COLORS[archive]}"
-      "*.jar=${COLORS[archive]}"
-      "*.sar=${COLORS[archive]}"
-      "*.war=${COLORS[archive]}"
-      "*.rar=${COLORS[archive]}"
 
-      "*.rpm=${COLORS[archive]}"
-      "*.cpio=${COLORS[archive]}"
-      "*.deb=${COLORS[archive]}"
+      # packet manager files
+      "*.rpm=${COLORS[packet]}"
+      "*.cpio=${COLORS[packet]}"
+      "*.deb=${COLORS[packet]}"
+
+      # java files
+      "*.jar=${COLORS[java]}"
+      "*.sar=${COLORS[java]}"
+      "*.war=${COLORS[java]}"
+      "*.rar=${COLORS[java]}"
 
       # images
       "*.jpg=${COLORS[image]}"
@@ -141,13 +148,17 @@ if [ $machtype != "MacOS" ]; then
       "*.java=${COLORS[source]}"
       "*.scm=${COLORS[source]}"
       "*.pl=${COLORS[source]}"
+      "*.py=${COLORS[source]}"
       "*.m=${COLORS[source]}"
       "*.F=${COLORS[source]}"
+      "*.cob=${COLORS[source]}"
       "*.fpp=${COLORS[source]}"
       "*.FPP=${COLORS[source]}"
       "*.r=${COLORS[source]}"
       "*.S=${COLORS[source]}"
       "*.adb=${COLORS[source]}"
+      "*.l=${COLORS[source]}"
+      "*.y=${COLORS[source]}"
       
       # preprocessed files (or those that should not be preprocessed)
       "*.i=${COLORS[preprocessed]}"
@@ -190,6 +201,8 @@ if [ $machtype != "MacOS" ]; then
       "*.shtml=${COLORS[markup]}"
       "*.xhtml=${COLORS[markup]}"
       "*.tex=${COLORS[markup]}"
+      "*.sty=${COLORS[markup]}"
+      "*.nw=${COLORS[markup]}"
       "*.txt=${COLORS[markup]}"
       "*.TXT=${COLORS[markup]}"
       "*.lyx=${COLORS[markup]}"

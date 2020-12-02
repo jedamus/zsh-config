@@ -1,6 +1,7 @@
 
 
 # erzeugt Samstag, 26. September 2020 19:29 (C) 2020 von Leander Jedamus
+# modifiziert Mittwoch, 02. Dezember 2020 13:57 von Leander Jedamus
 # modifiziert Samstag, 26. September 2020 20:48 von Leander Jedamus
 
 alias -s txt=$EDITOR
@@ -22,8 +23,10 @@ alias -s com=$BROWSER
 alias -s org=$BROWSER
 alias -s net=$BROWSER
 
+. $HOME/bin/grep_options.sh
+alias grep="grep $grep_options"
+
 alias d="dirs -v"
-alias grep="grep -i --color=auto"
 alias gt="gnome-terminal"
 
 alias cd..='cd ..'

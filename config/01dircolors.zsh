@@ -1,7 +1,7 @@
 
 
 # erzeugt Samstag, 26. September 2020 19:29 (C) 2020 von Leander Jedamus
-# modifiziert Donnerstag, 03. Dezember 2020 16:37 von Leander Jedamus
+# modifiziert Donnerstag, 03. Dezember 2020 17:16 von Leander Jedamus
 # modifiziert Mittwoch, 02. Dezember 2020 19:44 von Leander Jedamus
 # modifiziert Samstag, 26. September 2020 20:49 von Leander Jedamus
 
@@ -267,7 +267,8 @@ if [ $machtype != "MacOS" ]; then
   #    ${ls_colors}
   )
 
-  alias ls="ls --color=auto" 
+  . $HOME/bin/my_options.sh
+  alias ls="ls $ls_options" 
 else
   # macOS
   export LSCOLORS="exfxcxdxbxegedabagacad"

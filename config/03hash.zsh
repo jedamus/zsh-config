@@ -1,15 +1,16 @@
 
 
 # erzeugt Samstag, 26. September 2020 19:29 (C) 2020 von Leander Jedamus
+# modifiziert Samstag, 05. Dezember 2020 08:48 von Leander Jedamus
 # modifiziert Samstag, 26. September 2020 20:49 von Leander Jedamus
 
 proj=$HOME/Projekte
 
-hash -d            log=/var/log
+hash -d              log=/var/log
 # modifiziert Donnerstag, 05. Dezember 2019 23:31 von Leander Jedamus
 # modifiziert Mittwoch, 20. November 2019 12:38 von Leander Jedamus
 # modifiziert Dienstag, 12. November 2019 11:39 von Leander Jedamus
-hash -d              d=/usr/share/doc
+hash -d                d=/usr/share/doc
 
 if [ $machtype = "MacOS" ]; then
   doc=$HOME/Documents
@@ -25,7 +26,9 @@ if [ $machtype = "MacOS" ]; then
   hash -d        eclipse=$doc/workspace
   hash -d android_studio=$doc/AndroidStudioProjects
 else
-  hash -d           www=/var/www
+  hash -d            www=/var/www
+  hash -d            deb=$proj/deb
+  hash -d         docker=$proj/docker
 fi
 
 hash -d        qpython=$proj/qpython
@@ -37,8 +40,6 @@ hash -d          cobol=$proj/cobol
 hash -d           ruby=$proj/ruby
 hash -d              c=$proj/c
 hash -d       automake=$proj/automake
-hash -d             deb=$proj/deb
-
 if [ $machtype = "MacOS" ]; then
   hash -d            fas="$HOME/Library/Scripts/Folder Action Scripts"
   hash -d             te=$proj/TextExpander

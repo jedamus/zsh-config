@@ -14,6 +14,8 @@ Perhaps you have to do this first:
 sudo apt install zsh
 ```
 
+To install:
+
 ```
 sh ./install.sh
 ```

@@ -52,6 +52,11 @@ if [ $SHLVL -eq 1 ]; then
   source $HOME/.shenv
   unset EXPORT EQ
   export GPG_TTY=$( tty ) # GnuPG 2.1 with Git, problem in zsh
+
+  if [ -f $HOME/.use_ssh ]; then
+    eval "$(ssh-agent -s)"
+    ssh-add $HOME/.ssh/github
+  fi
 fi
 
 if [ -n "$PS1" ]; then
@@ -91,11 +96,6 @@ if [ -n "$PS1" ]; then
 
     echo "done\n"
   fi
-fi
-
-if [ -f $HOME/.use_ssh ]; then
-  eval "$(ssh-agent -s)"
-  ssh-add $HOME/.ssh/github
 fi
 
 #alias cls='clear'

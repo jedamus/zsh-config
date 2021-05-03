@@ -20,12 +20,18 @@ case $target in
     export machtype="MacOS"
     ;;
   Linux)
-    export machtype="Linux"
+    machtype=`uname -m`
+    case $machtype in
+      arm*) export machtype="Arm" ;;
+      *)    export machtype="Linux" ;;
+    esac
     ;;
   *)
     export machtype="unknown"
     ;;
 esac
+
+# echo $machtype
 
 #set -x
 if [ $machtype = "Linux" ]; then
@@ -35,7 +41,6 @@ if [ $machtype = "MacOS" ]; then
   zstyle :compinstall filename '/Users/leander/.zshrc'
 fi
 #set +x
-
 
 if [ $SHLVL -eq 1 ]; then
   if [ $machtype = "MacOS" ]; then
@@ -86,6 +91,11 @@ if [ -n "$PS1" ]; then
 
     echo "done\n"
   fi
+fi
+
+if [ ! -z $HOME/.use_ssh ]; then
+  eval "$(ssh-agent -s)"
+  ssh-add $HOME/.ssh/github
 fi
 
 #alias cls='clear'

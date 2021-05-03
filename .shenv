@@ -1,0 +1,33 @@
+$EXPORT PATH$EQ"${HOME}/bin:${PATH}:."
+$EXPORT MANPATH$EQ"${HOME}/anaconda3/share/man:/usr/local/man:/usr/local/share/man:/usr/man:/usr/share/man:."
+#$EXPORT COMPILER_URL$EQ"tcp://127.0.0.1:5555"
+$EXPORT FOREST_CONFIG$EQ"$HOME/.forest_config"
+
+#$EXPORT TEXINPUTS_latex$EQ".:${HOME}/Dokumente/latex:/usr/share/texmf-texlive//:/usr/share/texmf//:/etc/texmf//"
+#$EXPORT TEXINPUTS_pdflatex$EQ".:${HOME}/Dokumente/latex:/usr/share/texmf-texlive//:/usr/share/texmf//:/etc/texmf//"
+#$EXPORT KPATHSEA_DEBUG$EQ"65535"
+$EXPORT KPATHSEA_DEBUG$EQ"0"
+$EXPORT MYSQL_PS1$EQ"mysql (\u@\h) [\d]> "
+#$EXPORT PERL5LIB$EQ"/home/ljedamus/Documents/Projekte/perl/lib"
+
+$EXPORT MAKEFLAGS$EQ"-j4"
+#$EXPORT PYTHONPATH$EQ"$HOME/vim/.python:$HOME/Projekte/LibreOffice/own"
+
+# for netbeans with vim:
+#$EXPORT SPRO_GVIM_DEBUG$EQ"netbeans.log"
+#$EXPORT SPRO_GVIM_DLEVEL$EQ"0xffffffff"
+
+$EXPORT LANG$EQ"de_DE.UTF-8"
+
+$EXPORT TERM$EQ"xterm-color"
+
+#$EXPORT LC_ALL$EQ"de_DE.UTF-8"
+#$EXPORT LC_COLLATE$EQ"de_DE.UTF-8"
+#$EXPORT LC_TIME$EQ"de_DE.UTF-8"
+#$EXPORT LC_CTYPE$EQ"de_DE.UTF-8"
+#$EXPORT LC_MESSAGES$EQ"de_DE.UTF-8"
+#$EXPORT LC_MONETARY$EQ"de_DE.UTF-8"
+#$EXPORT LC_NUMERIC$EQ"de_DE.UTF-8"
+
+$EXPORT EDITOR$EQ"vi"
+$EXPORT BROWSER$EQ"lynx"

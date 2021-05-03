@@ -93,7 +93,7 @@ if [ -n "$PS1" ]; then
   fi
 fi
 
-if [ ! -z $HOME/.use_ssh ]; then
+if [ -f $HOME/.use_ssh ]; then
   eval "$(ssh-agent -s)"
   ssh-add $HOME/.ssh/github
 fi

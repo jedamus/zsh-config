@@ -8,6 +8,7 @@ color_options="--color=auto"
 
 ls_options="$color_options"
 grep_options="-i $color_options"
+ip_options="-h $color_options"
 
 # vim:ai sw=2
 

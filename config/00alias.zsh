@@ -26,6 +26,8 @@ alias -s net=$BROWSER
 
 . $HOME/bin/my_options.sh
 alias grep="grep $grep_options"
+alias ip="ip $ip_options"
+alias du="du -h"
 
 alias d="dirs -v"
 alias gt="gnome-terminal"

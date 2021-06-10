@@ -18,7 +18,7 @@ fort() {
   unset FORTUNE NL
 };# fort()
 
-if [ $SHLVL -eq 1 ]; then
+if [ $SHLVL -eq $shlvl ]; then
   fort linux
 fi
 

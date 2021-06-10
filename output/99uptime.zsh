@@ -3,7 +3,7 @@
 # erzeugt Samstag, 26. September 2020 19:29 (C) 2020 von Leander Jedamus
 # modifiziert Samstag, 26. September 2020 21:25 von Leander Jedamus
 
-if [ $SHLVL -eq 1 ]; then
+if [ $SHLVL -eq $shlvl ]; then
   UPTIME=/usr/bin/uptime
   NL="-n"
   if [ -x $UPTIME ]; then

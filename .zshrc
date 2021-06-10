@@ -42,7 +42,9 @@ if [ $machtype = "MacOS" ]; then
 fi
 #set +x
 
-if [ $SHLVL -eq 1 ]; then
+. $HOME/.shlvl
+
+if [ $SHLVL -eq $shlvl ]; then
   if [ $machtype = "MacOS" ]; then
     export PATH="/usr/local/texlive/2014/bin/x86_64-darwin:$PATH"
   fi

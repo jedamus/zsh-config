@@ -5,7 +5,7 @@
 
 mkdir -p $HOME/bin
 cp -vp zshprompt.py color_options.sh $HOME/bin
-cp -vp .zshrc .shenv $HOME
+cp -vp .zshrc .shenv .shlvl $HOME
 
 # vim:ai sw=2
 

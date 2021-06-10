@@ -31,7 +31,12 @@ alias du="du -h"
 alias df="df -h"
 
 alias d="dirs -v"
-alias gt="gnome-terminal"
+if [ -f /usr/bin/lxterminal ]; then
+  alias lt="lxterminal"
+else if [ -f /usr/bin/gnome-terminal ]; then
+    alias gt="gnome-terminal"
+  fi
+fi
 
 alias cd..='cd ..'
 alias cd...='cd ../..'

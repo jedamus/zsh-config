@@ -268,7 +268,7 @@ if [ $machtype != "MacOS" ]; then
   )
 
   . $HOME/bin/my_options.sh
-  alias ls="ls $ls_options" 
+  alias ls="ls $color_options" 
 else
   # macOS
   export LSCOLORS="exfxcxdxbxegedabagacad"

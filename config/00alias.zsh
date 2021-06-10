@@ -25,8 +25,8 @@ alias -s org=$BROWSER
 alias -s net=$BROWSER
 
 . $HOME/bin/my_options.sh
-alias grep="grep $grep_options"
-alias ip="ip $ip_options"
+alias grep="grep -i $color_options"
+alias ip="ip -h $color_options"
 alias du="du -h"
 alias df="df -h"
 

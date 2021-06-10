@@ -1,7 +1,7 @@
 $EXPORT PATH$EQ"${HOME}/bin:${PATH}:."
 $EXPORT MANPATH$EQ"${HOME}/anaconda3/share/man:/usr/local/man:/usr/local/share/man:/usr/man:/usr/share/man:."
 #$EXPORT COMPILER_URL$EQ"tcp://127.0.0.1:5555"
-$EXPORT FOREST_CONFIG$EQ"$HOME/.forest_config"
+$EXPORT FOREST_CONFIG$EQ"${HOME}/.forest_config"
 
 #$EXPORT TEXINPUTS_latex$EQ".:${HOME}/Dokumente/latex:/usr/share/texmf-texlive//:/usr/share/texmf//:/etc/texmf//"
 #$EXPORT TEXINPUTS_pdflatex$EQ".:${HOME}/Dokumente/latex:/usr/share/texmf-texlive//:/usr/share/texmf//:/etc/texmf//"
@@ -11,7 +11,7 @@ $EXPORT MYSQL_PS1$EQ"mysql (\u@\h) [\d]> "
 #$EXPORT PERL5LIB$EQ"/home/ljedamus/Documents/Projekte/perl/lib"
 
 $EXPORT MAKEFLAGS$EQ"-j4"
-#$EXPORT PYTHONPATH$EQ"$HOME/vim/.python:$HOME/Projekte/LibreOffice/own"
+#$EXPORT PYTHONPATH$EQ"${HOME}/vim/.python:${HOME}/Projekte/LibreOffice/own"
 
 # for netbeans with vim:
 #$EXPORT SPRO_GVIM_DEBUG$EQ"netbeans.log"

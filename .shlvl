@@ -1,1 +1,1 @@
-shlvl=1
+$EXPORT shlvl${EQ}1

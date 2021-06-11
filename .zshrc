@@ -42,17 +42,16 @@ if [ $machtype = "MacOS" ]; then
 fi
 #set +x
 
-. $HOME/.shlvl
+export EXPORT="export"
+export EQ="="
+source $HOME/.shlvl
 
 if [ $SHLVL -eq $shlvl ]; then
   if [ $machtype = "MacOS" ]; then
     export PATH="/usr/local/texlive/2014/bin/x86_64-darwin:$PATH"
   fi
 
-  export EXPORT="export"
-  export EQ="="
   source $HOME/.shenv
-  unset EXPORT EQ
   export GPG_TTY=$( tty ) # GnuPG 2.1 with Git, problem in zsh
 
 #  if [ -f $HOME/.use_ssh ]; then
@@ -60,6 +59,7 @@ if [ $SHLVL -eq $shlvl ]; then
 #    ssh-add $HOME/.ssh/github
 #  fi
 fi
+unset EXPORT EQ
 
 if [ -n "$PS1" ]; then
   #PS1=$'%{\e[1;33;44m%}z%{\e[1;32;40m%}%n@%m%{\e[0m%} %T [%{\e[1;32;10m%}%c%{\e[0m%}] $ ';
@@ -101,6 +101,7 @@ if [ -n "$PS1" ]; then
     fi
   fi
 fi
+unset shlvl
 
 #alias cls='clear'
 #alias cd..='cd ..'

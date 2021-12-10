@@ -8,8 +8,8 @@ autoload -Uz compinit; compinit
 
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
-HISTSIZE=10000
-SAVEHIST=10000
+HISTSIZE=20000
+SAVEHIST=20000
 # End of lines configured by zsh-newuser-install
 
 autoload zmv

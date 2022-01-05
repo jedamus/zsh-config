@@ -1,5 +1,5 @@
 enable_ssh() {
   eval "$(ssh-agent -s)"
-  ssh-add $HOME/.ssh/github
-  #ssh-add $HOME/.ssh/leander
+  ssh-add $HOME/.ssh/id_rsa
+  ssh-add $HOME/.ssh/leander
 }

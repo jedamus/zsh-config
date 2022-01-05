@@ -15,7 +15,7 @@ if [ -n "$DISPLAY" ]; then
     # set_title "${USER}@${HOST}:${PWD}"
   # };# chpwd()
   cd .
-  vagrant ssh telnet su sudo bash zsh csh tcsh screen tmux byobu()
+  vagrant ssh telnet su sudo bash zsh csh tcsh screen tmux byobu docker()
   {
     set_title "$0 $@"
     {

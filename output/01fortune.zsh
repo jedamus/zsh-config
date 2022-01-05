@@ -18,7 +18,7 @@ fort() {
   unset FORTUNE NL
 };# fort()
 
-if [ $SHLVL -eq $shlvl ]; then
+if [ -z "$HAS_ENV" ]; then
   fort linux
 fi
 

@@ -41,9 +41,9 @@ fi
 
 export EXPORT="export"
 export EQ="="
-source $HOME/.shlvl
+#source $HOME/.shlvl
 
-if [ $SHLVL -eq $shlvl ]; then
+if [ -z "$HAS_ENV" ]; then
   if [ $machtype = "MacOS" ]; then
     export PATH="/usr/local/texlive/2014/bin/x86_64-darwin:$PATH"
   fi
@@ -98,7 +98,8 @@ if [ -n "$PS1" ]; then
     fi
   fi
 fi
-unset shlvl
+export HAS_ENV="true"
+#unset shlvl
 
 #alias cls='clear'
 #alias cd..='cd ..'

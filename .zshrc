@@ -7,9 +7,6 @@ autoload -Uz compinit; compinit
 # End of lines added by compinstall
 
 # Lines configured by zsh-newuser-install
-HISTFILE=~/.histfile
-HISTSIZE=20000
-SAVEHIST=20000
 # End of lines configured by zsh-newuser-install
 
 autoload zmv
@@ -108,3 +105,7 @@ unset shlvl
 #alias ll='ls -la'
 #alias md='mkdir'
 #alias dir='ls -la'
+
+export HISTFILE=~/.histfile
+export HISTSIZE=20000
+export SAVEHIST=20000

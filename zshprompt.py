@@ -1,4 +1,4 @@
-#!/usr/bin/env python2
+#!/usr/bin/env python3
 # coding=utf-8
 
 # erzeugt Mittwoch, 11. März 2015 21:01 2015 von Leander Jedamus
@@ -29,7 +29,7 @@ def get_machname():
         name = socket.gethostname()
     else:
         name = socket.gethostbyaddr(socket.gethostname())[0]
-    return name.split(".")[0]
+    return name.split(sep=".")[0]
 
 
 def _zero_width(s):
@@ -194,8 +194,8 @@ def git_branch():
         # Non-zero return code, assume the current working dir is not in a git
         # repo.
         return ''
-    first_line = output.split('\n')[0]
-    branch_name = first_line.split('/', 2)[-1]
+    first_line = str(output.split(sep=b'\n')[0])
+    branch_name = first_line.split('/', 2)[-1].rstrip("'")
     branch = "{}{}{}".format(
         color("[", foreground="gray"),
         color(branch_name, foreground="red", background="yellow"),
@@ -256,10 +256,10 @@ def main():
             help='the exit status (int) of the previous shell command (default: None)')
     args = parser.parse_args()
     if args.side == 'left':
-        print left_prompt()
+        print(left_prompt())
     else:
         assert args.side == 'right'
-        print right_prompt(args.last_exit_status)
+        print(right_prompt(args.last_exit_status))
 
 
 if __name__ == '__main__':

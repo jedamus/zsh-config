@@ -9,10 +9,11 @@ enable_ssh() {
 
   if [ -f $private_key_list ]; then
     private_keys=`cat $private_key_list`
-    for private_key in ${=private_keys}; do
-      ssh-add $pfad/$private_key
-    done
   else
-    ssh-add $pfad/id_rsa
+    private_keys="id_rsa"
   fi
+
+  for private_key in ${=private_keys}; do
+    ssh-add $pfad/$private_key
+  done
 }

@@ -8,9 +8,12 @@ enable_ssh() {
   eval "$(ssh-agent -s)"
 
   if [ -f $private_key_list ]; then
-    for private_key in  `cat $private_key_list`; do
+    private_keys=`cat $private_key_list`
+    setopt SH_WORD_SPLIT
+    for private_key in $private_keys; do
       ssh-add $pfad/$private_key
     done
+    unsetopt SH_WORD_SPLIT
   else
     ssh-add $pfad/id_rsa
   fi

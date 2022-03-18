@@ -1,5 +1,17 @@
 enable_ssh() {
+
+  #set -x
+
+  pfad=$HOME/.ssh
+  private_key_list=$pfad/private_key_list
+
   eval "$(ssh-agent -s)"
-  ssh-add $HOME/.ssh/id_rsa
-  ssh-add $HOME/.ssh/leander
+
+  if [ -f $private_key_list ]; then
+    for private_key in  `cat $private_key_list`; do
+      ssh-add $pfad/$private_key
+    done
+  else
+    ssh-add $pfad/id_rsa
+  fi
 }

@@ -7,7 +7,7 @@ enable_ssh() {
 
   eval "$(ssh-agent -s)"
 
-  if [ -f $private_key_list ]; then
+  if [[ -f $private_key_list ]]; then
     private_keys=( $(cat $private_key_list) )
   else
     private_keys=( "id_rsa" )

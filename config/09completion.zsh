@@ -19,14 +19,14 @@ zstyle ':completion:*' squeeze-slashes true
 
 #lj2015:
 
-if [ $machtype != "MacOS" ];then
+if [[ $machtype != "MacOS" ]];then
   zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
   zstyle ':completion:*' show-ambiguity $color[bg-red]
 fi
 
 zstyle ':completion:*' accept-exact false
 
-if [ $machtype != "MacOS" ];then
+if [[ $machtype != "MacOS" ]];then
   # reverse video für ...
   zstyle ':completion:*:descriptions' format '%S%d%s'
   zstyle ':completion:*:corrections' format '%S%d (errors: %e)%s'
@@ -46,7 +46,7 @@ zstyle ':completion:*:rm:*:(all-|)files' ignored-patterns
 
 zstyle ':completion:*' menu select=3
 
-if [ $machtype != "MacOS" ];then
+if [[ $machtype != "MacOS" ]];then
   zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
 fi
 
@@ -58,7 +58,7 @@ zstyle -e ':completion:*:approximate:*' max-errors \
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 
 # von mir: ##+## evince einstellen
-if [ $machtype != "MacOS" ];then
+if [[ $machtype != "MacOS" ]];then
   zstyle ':completion:*:*:evince:*:*' file-patterns \
         "(*.pdf|*.ps|*.dvi|*.png|*.gif)" "*(-/)"
 fi

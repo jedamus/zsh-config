@@ -7,7 +7,7 @@
 setopt hist_ignore_space
 
 for cmd in ls rm cd pwd wipe; do
-  if [ -z "$aliases[$cmd]" ]; then
+  if [[ -z "$aliases[$cmd]" ]]; then
     eval "alias $cmd=' $cmd'"
   else
     eval "alias $cmd=' $aliases[$cmd]'"

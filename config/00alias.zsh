@@ -32,10 +32,10 @@ alias df="df -h"
 
 alias d="dirs -v"
 
-if [ -f /usr/bin/lxterminal ]; then
+if [[ -f /usr/bin/lxterminal ]]; then
   alias lt="lxterminal"
 fi
-if [ -f /usr/bin/gnome-terminal ]; then
+if [[ -f /usr/bin/gnome-terminal ]]; then
     alias gt="gnome-terminal"
 fi
 
@@ -60,7 +60,7 @@ alias mkdir='nocorrect mkdir -pv' # no spelling correction on mkdir and make par
 alias mv='nocorrect mv'           # no spelling correction on mv
 alias rm='nocorrect rm -i'        # no spelling correction on rm
 
-if [ -f /usr/games/fortune ]; then
+if [[ -f /usr/games/fortune ]]; then
   alias fl='fortune linux'
 fi
 

@@ -4,7 +4,7 @@
 # modifiziert Samstag, 03. Oktober 2020 13:44 von Leander Jedamus
 # modifiziert Samstag, 26. September 2020 19:34 von Leander Jedamus
 
-if [ -n "$DISPLAY" ]; then
+if [[ -n "$DISPLAY" ]]; then
   set_title()
   {
     echo -n "\e]2;${@}\007"

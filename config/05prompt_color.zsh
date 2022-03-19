@@ -5,7 +5,7 @@
 
 color_cmd() {
   res=$(builtin type $1 2>/dev/null)
-  [ -z $res ] && return
+  [[ -z $res ]] && return
   case $res in
     *'reserved word'*)  color='magenta' ;;
     *'an alias'*)       color='cyan'    ;;
@@ -45,15 +45,15 @@ recolor-cmd() {
   state=1
   region_highlight=()
   for cmd in $args; do
-    if [ $state -eq 1 ]; then
+    if [[ $state -eq 1 ]]; then
       color_cmd $cmd
-    elif [ $state -eq 2 ]; then
+    elif [[ $state -eq 2 ]]; then
       color_arg $cmd
       if [[ "$color" =~ 'red' ]]; then
         color_string $cmd
       fi
     fi
-    if [ -n "$color" ]; then
+    if [[ -n "$color" ]]; then
       region_highlight=($region_highlight "$offset $((${#cmd}+offset))
 fg=${color},bold")
     fi

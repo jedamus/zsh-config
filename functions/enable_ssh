@@ -2,6 +2,8 @@ enable_ssh() {
 
   #set -x
 
+  alt_pfad=$(pwd)
+
   pfad=$HOME/.ssh
   private_key_list=$pfad/private_key_list
 
@@ -13,7 +15,13 @@ enable_ssh() {
     private_keys=( "id_rsa" )
   fi
 
+  cd $pfad
   for private_key in $private_keys; do
-    ssh-add $pfad/$private_key
+    if [[ -f $private_key ]]; then
+      ssh-add $private_key
+    else
+      echo "cannot find private key $private_key"
+    fi
   done
+  cd $alt_pfad
 }

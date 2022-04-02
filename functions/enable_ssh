@@ -18,9 +18,9 @@ enable_ssh() {
     if [[ -f $private_key ]]; then
       ssh-add $private_key
     else
-      echo "cannot find private key $private_key"
+      echo "cannot find private key \"$private_key\""
     fi
   done
-
   popd > /dev/null
+
 }

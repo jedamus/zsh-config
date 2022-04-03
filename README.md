@@ -17,5 +17,5 @@ sudo apt install zsh
 To install:
 
 ```
-sh ./install.sh
+zsh ./install.zsh
 ```

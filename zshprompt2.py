@@ -2,6 +2,7 @@
 # coding=utf-8
 
 # erzeugt Mittwoch, 11. März 2015 21:01 2015 von Leander Jedamus
+# modifiziert Samstag, 13. August 2022 08:49 von Leander Jedamus
 # modifiziert Montag, 02. Mai 2022 20:27 von Leander Jedamus
 # modifiziert Montag, 07. Mai 2018 22:24 von Leander Jedamus
 # modifiziert Montag, 21. September 2015 17:01 von Leander Jedamus
@@ -26,12 +27,11 @@ def get_username():
 
 
 def get_machname():
-    if socket.gethostname().find('.') < 0:
-        name = socket.gethostname()
-    else:
+    name = socket.gethostname()
+    if name.find('.') >= 0:
         name = socket.gethostbyaddr(socket.gethostname())[0]
-    return name.split(".")[0]
-
+        name = name.split(".")[0]
+    return name
 
 def _zero_width(s):
     '''Return the given string, wrapped in zsh zero-width codes.

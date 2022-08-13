@@ -2,7 +2,6 @@
 # coding=utf-8
 
 # erzeugt Mittwoch, 11. März 2015 21:01 2015 von Leander Jedamus
-# modifiziert Montag, 02. Mai 2022 18:06 von Leander Jedamus
 # modifiziert Montag, 07. Mai 2018 22:24 von Leander Jedamus
 # modifiziert Montag, 21. September 2015 17:01 von Leander Jedamus
 # modifiziert Samstag, 19. September 2015 18:36 von Leander Jedamus
@@ -19,17 +18,19 @@ import os.path
 import subprocess
 import socket
 
+
 def get_username():
     import pwd
     return pwd.getpwuid(os.getuid())[0]
 
+
 def get_machname():
-    name = socket.gethostname()
-    if name.find('.') < 0:
+    if socket.gethostname().find('.') >= 0:
         name = socket.gethostname()
     else:
         name = socket.gethostbyaddr(socket.gethostname())[0]
     return name.split(sep=".")[0]
+
 
 def _zero_width(s):
     '''Return the given string, wrapped in zsh zero-width codes.

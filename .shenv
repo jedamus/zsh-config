@@ -31,3 +31,4 @@ $EXPORT TERM$EQ"xterm-color"
 
 $EXPORT EDITOR$EQ"vi"
 $EXPORT BROWSER$EQ"lynx"
+$EXPORT IPYTHONDIR$EQ"${HOME}/.ipython"

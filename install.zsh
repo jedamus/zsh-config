@@ -39,7 +39,7 @@ done
 
 cp -vp zshprompt$version.py $HOME/bin/zshprompt.py
 cp -vp color_options.sh $HOME/bin
-cp -vp .zshrc .shenv .shlvl $HOME
+cp -vp .zshrc .shenv $HOME
 
 # vim:ai sw=2
 

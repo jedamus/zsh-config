@@ -108,6 +108,6 @@ export HAS_ENV="true"
 #alias md='mkdir'
 #alias dir='ls -la'
 
-export HISTFILE=~/.histfile
+export HISTFILE=~/.zsh_history
 export HISTSIZE=20000
 export SAVEHIST=20000

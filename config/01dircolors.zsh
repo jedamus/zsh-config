@@ -1,7 +1,7 @@
 
 
 # erzeugt Samstag, 26. September 2020 19:29 (C) 2020 von Leander Jedamus
-# modifiziert Montag, 26. September 2022 15:14 von Leander Jedamus
+# modifiziert Montag, 26. September 2022 16:42 von Leander Jedamus
 # modifiziert Donnerstag, 03. Dezember 2020 17:16 von Leander Jedamus
 # modifiziert Mittwoch, 02. Dezember 2020 19:44 von Leander Jedamus
 # modifiziert Samstag, 26. September 2020 20:49 von Leander Jedamus
@@ -189,6 +189,7 @@ if [[ $machtype != "MacOS" ]]; then
       
       # object files
       "*.o=${COLORS[object]}"
+      "*.pyc=${COLORS[object]}"
       "*.class=${COLORS[object]}" # class-dateien
      
       # libraries XXX doesn't work if execute-bit is set (as normally)

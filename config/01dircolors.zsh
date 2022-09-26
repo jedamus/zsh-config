@@ -62,10 +62,12 @@ if [[ $machtype != "MacOS" ]]; then
       
       # scripts
       "*.sh=${COLORS[script]}"
+      "*.ksh=${COLORS[script]}"
       "*.mksh=${COLORS[script]}"
       "*.csh=${COLORS[script]}"
       "*.tcsh=${COLORS[script]}"
       "*.bash=${COLORS[script]}"
+      "*.dash=${COLORS[script]}"
       "*.zsh=${COLORS[script]}"
       "*.php=${COLORS[script]}"
       "*.cgi=${COLORS[script]}"

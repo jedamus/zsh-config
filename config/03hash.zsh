@@ -1,6 +1,7 @@
 
 
 # erzeugt Samstag, 26. September 2020 19:29 (C) 2020 von Leander Jedamus
+# modifiziert Freitag, 28. Oktober 2022 12:54 von Leander Jedamus
 # modifiziert Samstag, 05. Dezember 2020 08:48 von Leander Jedamus
 # modifiziert Samstag, 26. September 2020 20:49 von Leander Jedamus
 
@@ -38,6 +39,7 @@ hash -d           perl=$proj/perl
 hash -d        fortran=$proj/fortran
 hash -d          cobol=$proj/cobol
 hash -d           ruby=$proj/ruby
+hash -d           rust=$proj/rust
 hash -d              c=$proj/c
 hash -d       automake=$proj/automake
 if [[ $machtype == "MacOS" ]]; then

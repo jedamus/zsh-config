@@ -1,3 +1,5 @@
+$EXPORT PATH$EQ"${HOME}/bin:${PATH}:."
+$EXPORT MANPATH$EQ"${HOME}/anaconda3/share/man:/usr/local/man:/usr/local/share/man:/usr/man:/usr/share/man:."
 #$EXPORT COMPILER_URL$EQ"tcp://127.0.0.1:5555"
 $EXPORT FOREST_CONFIG$EQ"${HOME}/.forest_config"
 
@@ -37,5 +39,5 @@ $EXPORT CARGO_HOME$EQ"${HOME}/.cargo"
 $EXPORT PLATFORM$EQ"stable-armv7-unknown-linux-gnueabihf"
 #$EXPORT PLATFORM$EQ"stable-aarch64-unknown-linux-gnu"
 
-$EXPORT PATH$EQ"${HOME}/bin:${CARGO_HOME}/bin:${PATH}:."
-$EXPORT MANPATH$EQ"${RUSTUP_HOME}/toolchains/${PLATFORM}/share/man:${HOME}/anaconda3/share/man:/usr/local/man:/usr/local/share/man:/usr/man:/usr/share/man:."
+$EXPORT PATH$EQ"${CARGO_HOME}/bin:${PATH}:."
+$EXPORT MANPATH$EQ"${RUSTUP_HOME}/toolchains/${PLATFORM}/share/man:${MANPATH}"

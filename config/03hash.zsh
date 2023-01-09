@@ -48,6 +48,7 @@ if [[ $machtype == "MacOS" ]]; then
   unset doc
 fi
 
+
 unset proj
 
 # einfach ~python eingeben und die Shell wechselt in das entsprechende Verzeichnis

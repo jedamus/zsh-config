@@ -20,6 +20,7 @@ case $target in
     machtype=`uname -m`
     case $machtype in
       arm*) export machtype="Arm" ;;
+      aarch64*) export machtype="Arm" ;;
       *)    export machtype="Linux" ;;
     esac
     ;;
@@ -32,6 +33,9 @@ esac
 
 #set -x
 if [ $machtype = "Linux" ]; then
+  zstyle :compinstall filename '/home/leander/.zshrc'
+fi
+if [ $machtype = "Arm" ]; then
   zstyle :compinstall filename '/home/leander/.zshrc'
 fi
 if [ $machtype = "MacOS" ]; then
@@ -58,6 +62,8 @@ if [ -z "$HAS_ENV" ]; then
 fi
 unset EXPORT EQ
 
+source /etc/os-release
+
 if [ -n "$PS1" ]; then
   #PS1=$'%{\e[1;33;44m%}z%{\e[1;32;40m%}%n@%m%{\e[0m%} %T [%{\e[1;32;10m%}%c%{\e[0m%}] $ ';
 
@@ -81,9 +87,25 @@ if [ -n "$PS1" ]; then
   # export ZSH_HIGHLIGHT_HIGHLIGHTERS_DIR=/usr/local/share/zsh-syntax-highlighting/highlighters
   # source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
   if [ -z "$HAS_ENV" ]; then
+    if [ $machtype = "Arm" ]; then
+      if [ -f $HOME/mambaforge/condabin/conda ]; then
+	echo -n "initializing mamba conda ... "
+
+	cd $HOME
+	# >>> conda initialize >>>
+	__conda_setup="$('./mambaforge/condabin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+	if [ $? -eq 0 ]; then
+	  eval "$__conda_setup"
+	fi
+	unset __conda_setup
+	# <<< conda initialize <<<
+
+	echo "done\n"
+      fi
+    fi
     if [ $machtype = "Linux" ]; then
       if [ -f $HOME/anaconda3/bin/conda ]; then
-	echo -n "initializing conda ... "
+	echo -n "initializing anaconda conda ... "
 
 	cd $HOME
 	# >>> conda initialize >>>

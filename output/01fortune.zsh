@@ -8,7 +8,7 @@ fort() {
   FORTUNE=/usr/games/fortune
   NL="-n"
   if [ -x $FORTUNE ]; then
-    echo -n "${fg[blue]}"
+    echo -n "${fg[yellow]}"
     #$FORTUNE -s
     $FORTUNE $@
     echo -n "${fg[default]}"

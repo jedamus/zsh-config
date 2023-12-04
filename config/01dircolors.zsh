@@ -1,6 +1,8 @@
 
 
 # erzeugt Samstag, 26. September 2020 19:29 (C) 2020 von Leander Jedamus
+# modifiziert Donnerstag, 10. August 2023 18:55 von Leander Jedamus
+# modifiziert Mittwoch, 09. August 2023 09:20 von Leander Jedamus
 # modifiziert Montag, 26. September 2022 16:42 von Leander Jedamus
 # modifiziert Donnerstag, 03. Dezember 2020 17:16 von Leander Jedamus
 # modifiziert Mittwoch, 02. Dezember 2020 19:44 von Leander Jedamus
@@ -177,6 +179,12 @@ if [[ $machtype != "MacOS" ]]; then
       "*.js=${COLORS[source]}"
       "*.lisp=${COLORS[source]}"
       "*.pas=${COLORS[source]}"
+      "*.p=${COLORS[source]}"
+      "*.texinfo=${COLORS[source]}"
+      "*.txinfo=${COLORS[source]}"
+      "*.texi=${COLORS[source]}"
+      "*.mod=${COLORS[source]}"
+      "*.def=${COLORS[source]}"
       
       # preprocessed files (or those that should not be preprocessed)
       "*.i=${COLORS[preprocessed]}"
@@ -208,9 +216,21 @@ if [[ $machtype != "MacOS" ]]; then
 
       # for building
       "*akefile=${COLORS[build]}"
+      "*akefile.c_and_c++=${COLORS[build]}"
+      "*akefile.cobol=${COLORS[build]}"
+      "*akefile.cweb_and_noweb=${COLORS[build]}"
+      "*akefile.documentation=${COLORS[build]}"
+      "*akefile.flex_and_bison=${COLORS[build]}"
+      "*akefile.FORTRAN=${COLORS[build]}"
+      "*akefile.latex=${COLORS[build]}"
+      "*akefile.modula2=${COLORS[build]}"
+      "*akefile.pascal=${COLORS[build]}"
       "*akefile.in=${COLORS[build]}"
       "*onfigure=${COLORS[build]}"
       "*onfigure.in=${COLORS[build]}"
+      "*.cmake=${COLORS[build]}"
+      "*.pro=${COLORS[build]}"
+      "*.qrc=${COLORS[build]}"
 
       # markup files # XXX ?
       "*.html=${COLORS[markup]}"
@@ -224,6 +244,7 @@ if [[ $machtype != "MacOS" ]]; then
       "*.nw=${COLORS[markup]}"
       "*.txt=${COLORS[markup]}"
       "*.TXT=${COLORS[markup]}"
+      "*.info=${COLORS[markup]}"
       "*.lyx=${COLORS[markup]}"
       "*.mgp=${COLORS[markup]}"
 
@@ -231,7 +252,7 @@ if [[ $machtype != "MacOS" ]]; then
       "*.sty=${COLORS[markup]}"
       "*.fd=${COLORS[markup]}"
       "*.cls=${COLORS[markup]}"
-      "*.def=${COLORS[markup]}"
+      # "*.def=${COLORS[markup]}"
       "*.cfg=${COLORS[markup]}"
       "*.ltx=${COLORS[markup]}"
 

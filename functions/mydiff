@@ -1,0 +1,7 @@
+mydiff() {
+  if [[ -z $1 ]]; then
+    echo "usage : $0 <filename>"
+  else
+    diff ~/.zsh/$1 ~/tmp/.zsh/$1
+  fi
+}

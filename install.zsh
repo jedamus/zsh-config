@@ -1,6 +1,7 @@
 #!/usr/bin/env zsh
 
 # erzeugt Montag, 14. Dezember 2020 14:40 (C) 2020 von Leander Jedamus
+# modifiziert Montag, 04. Dezember 2023 14:38 von Leander Jedamus
 # modifiziert Sonntag, 03. April 2022 09:54 von Leander Jedamus
 # modifiziert Sonntag, 03. April 2022 09:51 von Simone Kalisch
 # modifiziert Sonntag, 03. April 2022 08:48 von Leander Jedamus
@@ -39,7 +40,7 @@ done
 
 cp -vp zshprompt$version.py $HOME/bin/zshprompt.py
 cp -vp color_options.sh $HOME/bin
-cp -vp .zshrc .shenv $HOME
+cp -vp .zshrc .shenv .shlvl $HOME
 
 # vim:ai sw=2
 

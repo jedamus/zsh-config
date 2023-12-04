@@ -62,7 +62,9 @@ if [ -z "$HAS_ENV" ]; then
 fi
 unset EXPORT EQ
 
-source /etc/os-release
+if [ ! $machtype = "MacOS" ]; then
+  source /etc/os-release
+fi
 
 if [ -n "$PS1" ]; then
   #PS1=$'%{\e[1;33;44m%}z%{\e[1;32;40m%}%n@%m%{\e[0m%} %T [%{\e[1;32;10m%}%c%{\e[0m%}] $ ';

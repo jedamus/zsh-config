@@ -62,8 +62,12 @@ if [ -z "$HAS_ENV" ]; then
 fi
 unset EXPORT EQ
 
-if [ ! $machtype = "MacOS" ]; then
-  source /etc/os-release
+infile=/etc/os-release
+if [ -f $infile ]; then
+  outfile=$(mktemp)
+  cat $infile | sed -e "s/^/export /" > $outfile
+  source $outfile
+  rm -f $outfile
 fi
 
 if [ -n "$PS1" ]; then

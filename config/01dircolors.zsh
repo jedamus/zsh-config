@@ -1,6 +1,7 @@
 
 
 # erzeugt Samstag, 26. September 2020 19:29 (C) 2020 von Leander Jedamus
+# modifiziert Dienstag, 26. Dezember 2023 10:24 von Leander Jedamus
 # modifiziert Mittwoch, 06. Dezember 2023 08:25 von Leander Jedamus
 # modifiziert Donnerstag, 10. August 2023 18:55 von Leander Jedamus
 # modifiziert Mittwoch, 09. August 2023 09:20 von Leander Jedamus
@@ -213,8 +214,7 @@ if [[ $machtype != "MacOS" ]]; then
       "*.hpp=${COLORS[header]}"
       "*.h++=${COLORS[header]}"
       "*.hxx=${COLORS[header]}"
-      "*.ads=${COLORS[header]}" # OK?
-      
+      "*.ads=${COLORS[header]}"
 
       # for building
       "*akefile=${COLORS[build]}"
@@ -233,6 +233,7 @@ if [[ $machtype != "MacOS" ]]; then
       "*.cmake=${COLORS[build]}"
       "*.pro=${COLORS[build]}"
       "*.qrc=${COLORS[build]}"
+      "*.d=${COLORS[build]}"
 
       # markup files # XXX ?
       "*.html=${COLORS[markup]}"

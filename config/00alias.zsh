@@ -1,6 +1,7 @@
 
 
 # erzeugt Samstag, 26. September 2020 19:29 (C) 2020 von Leander Jedamus
+# modifiziert Mittwoch, 17. Januar 2024 08:42 von Leander Jedamus
 # modifiziert Montag, 02. Mai 2022 20:25 von Leander Jedamus
 # modifiziert Donnerstag, 03. Dezember 2020 17:17 von Leander Jedamus
 # modifiziert Mittwoch, 02. Dezember 2020 13:57 von Leander Jedamus
@@ -27,6 +28,7 @@ alias -s net=$BROWSER
 
 . $HOME/bin/color_options.sh
 alias grep="grep -i $color_options"
+alias locate="locate -i"
 alias ip="ip -h $color_options"
 alias du="du -h"
 alias df="df -h"

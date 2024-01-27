@@ -1,6 +1,7 @@
 
 
 # erzeugt Samstag, 26. September 2020 19:29 (C) 2020 von Leander Jedamus
+# modifiziert Samstag, 27. Januar 2024 08:09 von Leander Jedamus
 # modifiziert Mittwoch, 17. Januar 2024 08:42 von Leander Jedamus
 # modifiziert Montag, 02. Mai 2022 20:25 von Leander Jedamus
 # modifiziert Donnerstag, 03. Dezember 2020 17:17 von Leander Jedamus
@@ -46,12 +47,12 @@ alias cd..='cd ..'
 alias cd...='cd ../..'
 alias ...='cd ../..'
 
-alias ll='ls -la'
-alias lt='ls -latr'
+alias ll='ls -laF'
+alias lt='ls -latrF'
 
 alias md='mkdir'
 alias rd='rmdir'
-alias dir='ls -la'
+alias dir='ls -laF'
 alias cls='clear'
 #alias a2ps='a2ps.pl'
 

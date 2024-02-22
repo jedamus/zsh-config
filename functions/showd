@@ -1,0 +1,4 @@
+showd() {
+ pushd . > /dev/null
+ popd
+}

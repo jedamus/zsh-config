@@ -1,6 +1,7 @@
 
 
 # erzeugt Samstag, 26. September 2020 19:29 (C) 2020 von Leander Jedamus
+# modifiziert Mittwoch, 06. März 2024 16:25 von Leander Jedamus
 # modifiziert Dienstag, 26. Dezember 2023 10:24 von Leander Jedamus
 # modifiziert Mittwoch, 06. Dezember 2023 08:25 von Leander Jedamus
 # modifiziert Donnerstag, 10. August 2023 18:55 von Leander Jedamus
@@ -15,7 +16,7 @@ if [[ $machtype != "MacOS" ]]; then
   COLORS[ex]="00;32"
   COLORS[fi]="00"
   COLORS[no]="00"
-  COLORS[di]="01;34"
+  COLORS[di]="01;36"
   COLORS[ln]="target"
   COLORS[pi]="40;33"
   COLORS[so]="00;35"

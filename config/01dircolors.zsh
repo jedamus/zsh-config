@@ -1,6 +1,7 @@
 
 
 # erzeugt Samstag, 26. September 2020 19:29 (C) 2020 von Leander Jedamus
+# modifiziert Donnerstag, 07. März 2024 17:48 von Leander Jedamus
 # modifiziert Mittwoch, 06. MÃ¤rz 2024 16:25 von Leander Jedamus
 # modifiziert Dienstag, 26. Dezember 2023 10:24 von Leander Jedamus
 # modifiziert Mittwoch, 06. Dezember 2023 08:25 von Leander Jedamus
@@ -235,6 +236,8 @@ if [[ $machtype != "MacOS" ]]; then
       "*.pro=${COLORS[build]}"
       "*.qrc=${COLORS[build]}"
       "*.d=${COLORS[build]}"
+      "*.ac=${COLORS[build]}"
+      "*.am=${COLORS[build]}"
 
       # markup files # XXX ?
       "*.html=${COLORS[markup]}"
@@ -247,6 +250,7 @@ if [[ $machtype != "MacOS" ]]; then
       "*.xhtml=${COLORS[markup]}"
       "*.nw=${COLORS[markup]}"
       "*.txt=${COLORS[markup]}"
+      "*.md=${COLORS[markup]}"
       "*.TXT=${COLORS[markup]}"
       "*.info=${COLORS[markup]}"
       "*.lyx=${COLORS[markup]}"

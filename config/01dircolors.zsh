@@ -1,6 +1,7 @@
 
 
 # erzeugt Samstag, 26. September 2020 19:29 (C) 2020 von Leander Jedamus
+# modifiziert Dienstag, 12. März 2024 18:56 von Leander Jedamus
 # modifiziert Donnerstag, 07. März 2024 17:48 von Leander Jedamus
 # modifiziert Mittwoch, 06. MÃ¤rz 2024 16:25 von Leander Jedamus
 # modifiziert Dienstag, 26. Dezember 2023 10:24 von Leander Jedamus
@@ -78,6 +79,9 @@ if [[ $machtype != "MacOS" ]]; then
       "*.zsh=${COLORS[script]}"
       "*.php=${COLORS[script]}"
       "*.cgi=${COLORS[script]}"
+      "*.yaml=${COLORS[script]}"
+      "*.yml=${COLORS[script]}"
+      "*.json=${COLORS[script]}"
 
       # Office Dokumente
       "*.odb=${COLORS[doc]}" # Datenbank

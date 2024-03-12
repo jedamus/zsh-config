@@ -1,7 +1,7 @@
 
 
 # erzeugt Samstag, 26. September 2020 19:29 (C) 2020 von Leander Jedamus
-# modifiziert Dienstag, 12. März 2024 15:39 von Leander Jedamus
+# modifiziert Dienstag, 12. März 2024 17:23 von Leander Jedamus
 # modifiziert Samstag, 16. Dezember 2023 16:01 von Leander Jedamus
 # modifiziert Freitag, 27. Oktober 2023 13:53 von 
 # modifiziert Montag, 21. August 2023 07:42 von Leander Jedamus
@@ -32,7 +32,6 @@ if [[ $machtype == "MacOS" ]]; then
   hash -d android_studio=$doc/AndroidStudioProjects
 else
   hash -d            www=/var/www
-  hash -d            deb=$proj/deb
   hash -d         docker=$proj/docker
 fi
 
@@ -49,6 +48,7 @@ hash -d        modula2=$proj/modula2
 hash -d            php=$proj/php
 hash -d           html=$proj/html
 hash -d       automake=$proj/automake
+hash -d            deb=$proj/deb
 hash -d        flatpak=$proj/flatpak
 if [[ $machtype == "MacOS" ]]; then
   hash -d            fas="$HOME/Library/Scripts/Folder Action Scripts"

@@ -2,14 +2,14 @@
 
 local expl ret=1
 
-_arguments -C -s \
-  '--help[display help]' \
-  '-v[verbose]' \
-  '-k[in KB]' \
-  '-m[in MB]' \
-  '-g[in GB]' \
-  '-o[output path]:dirs:_dirs' \
-  '-s[wanted size]: :_guard "[0-9]#" "size in bytes"' \
+_arguments -S -s \
+  '(--help, -?)'{--help,-\?}'[display help]' \
+  '(--verbose, -v)'{--verbose,-v}'[verbose]' \
+  '(--kb, -k)'{--kb,-k}'[in KB]' \
+  '(--mb, -m)'{--mb,-m}'[in MB]' \
+  '(--gb, -g)'{--gb,-g}'[in GB]' \
+  '(--outpath, -o)'{--outpath,-o}'[output path]:dirs:_dirs' \
+  '(--size, -s)'{--size,-s}'[wanted size]: :_guard "[0-9]#" "size in bytes"' \
   '*:files:_files' \
   && ret=0
 

@@ -6,6 +6,7 @@ _arguments -C -s \
   '--help[display help]' \
   '--clear[clear display before executing command]' \
   '--sleep[sleep n seconds before executing command]: :_guard "[0−9]#" "seconds to sleep"' \
+  '*:command:_command_names -e' \
   && ret=0
 
 return ret

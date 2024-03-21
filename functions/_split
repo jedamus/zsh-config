@@ -8,9 +8,13 @@ _arguments -S -s \
   '(--kb, -k)'{--kb,-k}'[in KB]' \
   '(--mb, -m)'{--mb,-m}'[in MB]' \
   '(--gb, -g)'{--gb,-g}'[in GB]' \
-  '(--outpath, -o)'{--outpath,-o}'[output path]:dirs:_dirs' \
+  '(--outpath, -o)'{--outpath,-o}'[output path]:dir:_dirs' \
   '(--size, -s)'{--size,-s}'[wanted size]: :_guard "[0-9]#" "size in bytes"' \
-  '*:files:_files' \
+  '*:files:->files' \
   && ret=0
+
+_description files expl 'file'
+
+_files "$expl[@]" -g '*' 
 
 return ret

@@ -1,23 +1,39 @@
 activate_env() {
+  function _helper_() {
+    d=$1
+
+    export PY_ENV_DIR=${PY_ENV_DIR:-env}
+    d_env="$d/$PY_ENV_DIR/bin"
+    d_ipython=".ipython"
+    d_p_ipython="$d/$d_ipython"
+    f_activate="$d_env/activate"
+
+    if [[ -f "$f_activate" ]]; then
+      . "$f_activate"
+      echo " $PY_ENV_DIR activated."
+
+      #export PATH=$d:${PATH}
+      #echo $PATH
+    fi
+
+    if [[ -d "$d_p_ipython" ]]; then
+      echo " $d_ipython activated."
+      export IPYTHONDIR="$d_p_ipython"
+    fi
+  }
+
   #set -x
 
-  d=$(pwd)
-  export PY_ENV_DIR=${PY_ENV_DIR:-env}
-  d_env="$d/$PY_ENV_DIR/bin"
-  d_ipython=".ipython"
-  d_p_ipython="$d/$d_ipython"
-  f_activate="$d_env/activate"
+  if [[ -z $1 ]]; then
+    _helper_ $(pwd)
 
-  if [ -f "$f_activate" ]; then
-    . "$f_activate"
-    echo " $PY_ENV_DIR activated."
-
-    #export PATH=$d:${PATH}
-    #echo $PATH
+  else
+    if [[ -d $1 ]]; then
+      _helper_ $1
+      cd $1
+    else
+      echo "dir not found: $1"
+    fi
   fi
 
-  if [ -d "$d_p_ipython" ]; then
-    echo " $d_ipython activated."
-    export IPYTHONDIR="$d_p_ipython"
-  fi
 }

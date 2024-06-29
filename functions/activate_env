@@ -1,5 +1,5 @@
 activate_env() {
-  function _helper_() {
+  _helper_() {
     d=$1
 
     export PY_ENV_DIR=${PY_ENV_DIR:-env}
@@ -25,14 +25,15 @@ activate_env() {
   #set -x
 
   if [[ -z $1 ]]; then
-    _helper_ $(pwd)
-
+    d=$(pwd)
+    _helper_ $d
   else
-    if [[ -d $1 ]]; then
-      _helper_ $1
-      cd $1
+    d=$1
+    if [[ -d $d ]]; then
+      _helper_ $d
+      cd $d
     else
-      echo "dir not found: $1"
+      echo "dir not found: $d"
     fi
   fi
 

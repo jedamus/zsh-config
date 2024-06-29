@@ -1,0 +1,23 @@
+activate_env() {
+  #set -x
+
+  d=$(pwd)
+  export PY_ENV_DIR=${PY_ENV_DIR:-env}
+  d_env="$d/$PY_ENV_DIR/bin"
+  d_ipython=".ipython"
+  d_p_ipython="$d/$d_ipython"
+  f_activate="$d_env/activate"
+
+  if [ -f "$f_activate" ]; then
+    . "$f_activate"
+    echo " $PY_ENV_DIR activated."
+
+    #export PATH=$d:${PATH}
+    #echo $PATH
+  fi
+
+  if [ -d "$d_p_ipython" ]; then
+    echo " $d_ipython activated."
+    export IPYTHONDIR="$d_p_ipython"
+  fi
+}

@@ -33,7 +33,7 @@ activate_env() {
       _helper_ $d
       cd $d
     else
-      echo "dir not found: $d"
+      echo "error: dir not found: $d"
     fi
   fi
 

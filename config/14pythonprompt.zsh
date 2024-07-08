@@ -1,6 +1,7 @@
 
 
 # erzeugt Samstag, 26. September 2020 19:29 (C) 2020 von Leander Jedamus
+# modifiziert Montag, 08. Juli 2024 06:50 von Leander Jedamus
 # modifiziert Sonntag, 07. Juli 2024 09:02 von Leander Jedamus
 # modifiziert Sonntag, 30. Juni 2024 06:16 von Leander Jedamus
 # modifiziert Samstag, 26. September 2020 20:51 von Leander Jedamus
@@ -22,7 +23,6 @@ virtualenv_prompt() {
 export OLDPROMPT=$PROMPT
 export OLDRPROMPT=$RPROMPT
 precmd() {
-  PS1="$(virtualenv_prompt)${fgp[yellow]}${bgp[blue]}z${fgp[blue]}${bgp[yellow]}%n@%m${fgp[default]}${bgp[default]} %T (%!) %(!.#.$) "
   stat=$?
   prmt=$HOME/bin/zshprompt.py
   if [[ -d ./.git ]]; then
@@ -30,7 +30,7 @@ precmd() {
     export RPROMPT="${$($prmt right --last-exit-status $stat):-$RPROMPT}"
   else
     #export PROMPT=$OLDPROMPT
-    export PROMPT="$(virtualenv_prompt)${fgp[yellow]}${bgp[blue]}z${fgp[blue]}${bgp[yellow]}%n@%m${fgp[default]}${bgp[default]} %T (%!) %(!.#.$) "
+    export PROMPT="$(virtualenv_prompt)$COLOUR_PROMPT"
     export RPROMPT=$OLDRPROMPT
   fi
 }

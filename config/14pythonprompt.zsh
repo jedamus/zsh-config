@@ -1,7 +1,7 @@
 
 
 # erzeugt Samstag, 26. September 2020 19:29 (C) 2020 von Leander Jedamus
-# modifiziert Montag, 08. Juli 2024 06:50 von Leander Jedamus
+# modifiziert Montag, 08. Juli 2024 09:35 von Leander Jedamus
 # modifiziert Sonntag, 07. Juli 2024 09:02 von Leander Jedamus
 # modifiziert Sonntag, 30. Juni 2024 06:16 von Leander Jedamus
 # modifiziert Samstag, 26. September 2020 20:51 von Leander Jedamus
@@ -14,9 +14,9 @@ virtualenv_prompt() {
   # and its children
   local venv_name="${VIRTUAL_ENV##*/}"
   if typeset -f deactivate >/dev/null; then
-    echo "[${venv_name}] "
+    echo "${fgp[green]}[${fgp[white]}${venv_name}${fgp[green]}]${fgp[default]} "
   else
-    echo "<${venv_name}> "
+    echo "${fgp[green]}<${fgp[white]}${venv_name}${fgp[green]}>${fgp[default]} "
   fi
 }
 
@@ -30,8 +30,8 @@ precmd() {
     export RPROMPT="${$($prmt right --last-exit-status $stat):-$RPROMPT}"
   else
     #export PROMPT=$OLDPROMPT
-    export PROMPT="$(virtualenv_prompt)$COLOUR_PROMPT"
-    export RPROMPT=$OLDRPROMPT
+    export PROMPT="$COLOUR_PROMPT"
+    export RPROMPT="$(virtualenv_prompt)$OLDRPROMPT"
   fi
 }
 
